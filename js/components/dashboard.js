@@ -288,6 +288,7 @@ function renderGettingStarted() {
       </div>
     </div>
   `;
+}
 
 /**
  * Calculate dashboard metrics

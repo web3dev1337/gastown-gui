@@ -99,12 +99,13 @@ export function initModals() {
     btn.addEventListener('click', closeAllModals);
   });
 
-  // Open buttons
-  document.querySelectorAll('[data-modal-open]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const modalId = btn.dataset.modalOpen;
-      openModal(modalId);
-    });
+  // Open buttons (delegated so dynamically rendered content works too)
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-modal-open]');
+    if (!btn) return;
+    const modalId = btn.dataset.modalOpen;
+    if (!modalId) return;
+    openModal(modalId);
   });
 
   // Form submissions

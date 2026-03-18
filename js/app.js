@@ -50,6 +50,7 @@ const elements = {
   townName: document.getElementById('town-name'),
   connectionStatus: document.getElementById('connection-status'),
   mailBadge: document.getElementById('mail-badge'),
+  moreBadge: document.getElementById('more-badge'),
   hookStatus: document.getElementById('hook-status'),
   statusMessage: document.getElementById('status-message'),
   agentTree: document.getElementById('agent-tree'),
@@ -257,8 +258,15 @@ function switchView(viewId) {
     tab.classList.toggle('active', tab.dataset.view === viewId);
   });
 
+  let hasActiveDropdownView = false;
   document.querySelectorAll('.nav-dropdown-item').forEach(item => {
-    item.classList.toggle('active', item.dataset.view === viewId);
+    const isActive = item.dataset.view === viewId;
+    item.classList.toggle('active', isActive);
+    if (isActive) hasActiveDropdownView = true;
+  });
+
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+    toggle.classList.toggle('active', hasActiveDropdownView);
   });
 
   views.forEach(view => {
@@ -762,8 +770,14 @@ function subscribeToState() {
 
     // Update badge
     const unread = mail.filter(m => !m.read).length;
-    elements.mailBadge.textContent = unread;
-    elements.mailBadge.classList.toggle('hidden', unread === 0);
+    if (elements.mailBadge) {
+      elements.mailBadge.textContent = unread;
+      elements.mailBadge.classList.toggle('hidden', unread === 0);
+    }
+    if (elements.moreBadge) {
+      elements.moreBadge.textContent = unread;
+      elements.moreBadge.classList.toggle('hidden', unread === 0);
+    }
   });
 }
 
