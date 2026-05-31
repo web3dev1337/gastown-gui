@@ -63,7 +63,7 @@ async function startRealServerFixture({ gtScript, bdScript, ghScript }) {
     env: {
       ...process.env,
       GASTOWN_PORT: String(port),
-      HOST: '127.0.0.1',
+      GASTOWN_HOST: '127.0.0.1',
       GT_ROOT: gtRoot,
       PATH: `${binDir}:${process.env.PATH}`,
       GT_CALL_LOG: gtCallLog,

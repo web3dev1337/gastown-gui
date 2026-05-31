@@ -90,7 +90,7 @@ async function startFixture({ gtScript, bdScript, ghScript, env = {} }) {
     env: {
       ...process.env,
       GASTOWN_PORT: String(port),
-      HOST: '127.0.0.1',
+      GASTOWN_HOST: '127.0.0.1',
       GT_ROOT: gtRoot,
       PATH: binDir,
       ...env,
