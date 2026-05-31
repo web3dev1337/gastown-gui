@@ -15,7 +15,7 @@
  *
  * Options:
  *   --port, -p    Port to run on (default: 7667)
- *   --host, -h    Host to bind to (default: 127.0.0.1)
+ *   --host, -h    Host to bind to (default: 127.0.0.1, or GASTOWN_HOST env var)
  *   --open, -o    Open browser after starting
  *   --dev         Enable development mode (auto-reload)
  */
@@ -45,7 +45,7 @@ if (args.includes('--version') || args.includes('-v')) {
 const command = args.find(a => !a.startsWith('-')) || 'start';
 const options = {
   port: getOption(['--port', '-p']) || process.env.GASTOWN_PORT || '7667',
-  host: getOption(['--host', '-h']) || process.env.HOST || '127.0.0.1',
+  host: getOption(['--host', '-h']) || process.env.GASTOWN_HOST || '127.0.0.1',
   open: hasFlag(['--open', '-o']),
   dev: hasFlag(['--dev']),
 };
@@ -79,13 +79,13 @@ Commands:
 
 Options:
   --port, -p <port>   Port to run on (default: 7667, or GASTOWN_PORT env var)
-  --host, -h <host>   Host to bind to (default: 127.0.0.1, or HOST env var)
+  --host, -h <host>   Host to bind to (default: 127.0.0.1, or GASTOWN_HOST env var)
   --open, -o          Open browser after starting
   --dev               Enable development mode
 
 Environment Variables:
   GASTOWN_PORT Server port (default: 7667)
-  HOST         Server host (default: 127.0.0.1)
+  GASTOWN_HOST Server host (default: 127.0.0.1)
   GT_ROOT      Gas Town root directory (default: ~/gt)
 
 Examples:
@@ -209,7 +209,7 @@ function startServer() {
   const env = {
     ...process.env,
     GASTOWN_PORT: options.port,
-    HOST: options.host,
+    GASTOWN_HOST: options.host,
   };
 
   const serverPath = path.join(packageRoot, 'server.js');

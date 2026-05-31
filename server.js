@@ -63,7 +63,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const PORT = process.env.GASTOWN_PORT || 7667;
-const HOST = process.env.HOST || '127.0.0.1';
+// Use GASTOWN_HOST (not the bare HOST env var, which collides with the
+// compiler-toolchain convention, e.g. HOST=arm64-apple-darwin* set by
+// conda/clang cross-compile shells — that would make the server try to bind
+// to an unresolvable hostname and crash with getaddrinfo ENOTFOUND).
+const HOST = process.env.GASTOWN_HOST || '127.0.0.1';
 const HOME = process.env.HOME || os.homedir();
 const GT_ROOT = process.env.GT_ROOT || path.join(HOME, 'gt');
 const GT_EXECUTABLE = resolveExecutable({
