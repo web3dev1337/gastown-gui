@@ -850,14 +850,28 @@ app.get('/api/bead/:beadId/links', async (req, res) => {
       }
     }
 
-    // Get list of rig names
-    const rigsResult = await executeGT(['rig', 'list']);
-    if (!rigsResult.success) {
-      return res.json(links);
+    // Get list of rig names — prefer --json output, fall back to text parsing
+    // (consistent with /api/rigs and /api/setup/status).
+    let rigNames = null;
+    const rigsJsonResult = await executeGT(['rig', 'list', '--json']);
+    if (rigsJsonResult.success) {
+      try {
+        const parsed = JSON.parse(rigsJsonResult.data);
+        if (Array.isArray(parsed)) {
+          rigNames = parsed.map((rig) => rig.name).filter(Boolean);
+        }
+      } catch {
+        // JSON parse failed — fall through to text parsing
+      }
     }
-
-    // Parse rig names from both legacy and emoji-prefixed formats
-    const rigNames = parseRigNames(rigsResult.data).map((rig) => rig.name);
+    if (rigNames === null) {
+      const rigsTextResult = await executeGT(['rig', 'list']);
+      if (!rigsTextResult.success) {
+        return res.json(links);
+      }
+      // Parse rig names from both legacy and emoji-prefixed formats
+      rigNames = parseRigNames(rigsTextResult.data).map((rig) => rig.name);
+    }
 
     console.log(`[Links] Found rigs: ${rigNames.join(', ')}`);
 
