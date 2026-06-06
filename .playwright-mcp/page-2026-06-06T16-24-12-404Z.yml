@@ -1,0 +1,873 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img "Gas Town" [ref=e6]
+        - generic [ref=e7]: GAS TOWN
+      - generic [ref=e8]: footy
+      - generic [ref=e9]:
+        - generic [ref=e10]: assistant
+        - textbox "Tell Mayor what to build..." [ref=e11]
+        - button "send" [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: send
+        - button "visibility" [ref=e14] [cursor=pointer]:
+          - generic [ref=e15]: visibility
+    - generic [ref=e17]:
+      - button "dashboard Overview" [ref=e18] [cursor=pointer]:
+        - generic [ref=e19]: dashboard
+        - generic [ref=e20]: Overview
+      - button "local_shipping Convoys" [ref=e21] [cursor=pointer]:
+        - generic [ref=e22]: local_shipping
+        - generic [ref=e23]: Convoys
+      - button "task_alt Work" [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]: task_alt
+        - generic [ref=e26]: Work
+      - button "groups Agents" [ref=e27] [cursor=pointer]:
+        - generic [ref=e28]: groups
+        - generic [ref=e29]: Agents
+      - button "folder_special Rigs" [ref=e30] [cursor=pointer]:
+        - generic [ref=e31]: folder_special
+        - generic [ref=e32]: Rigs
+      - generic [ref=e33]:
+        - button "more_horiz More 28 expand_more" [ref=e489] [cursor=pointer]:
+          - generic [ref=e35]: more_horiz
+          - generic [ref=e36]: More
+          - generic [ref=e93]: "28"
+          - generic [ref=e37]: expand_more
+        - generic [ref=e94]:
+          - button "groups Crews" [ref=e95] [cursor=pointer]:
+            - generic [ref=e96]: groups
+            - text: Crews
+          - button "science Formulas" [ref=e97] [cursor=pointer]:
+            - generic [ref=e98]: science
+            - text: Formulas
+          - button "merge_type Pull Requests" [ref=e100] [cursor=pointer]:
+            - generic [ref=e101]: merge_type
+            - text: Pull Requests
+          - button "bug_report Issues" [ref=e102] [cursor=pointer]:
+            - generic [ref=e103]: bug_report
+            - text: Issues
+          - button "mail Mail 28 Messages between agents and the human overseer." [active] [ref=e490] [cursor=pointer]:
+            - generic [ref=e106]: mail
+            - text: Mail
+            - generic [ref=e107]: "28"
+            - text: Messages between agents and the human overseer.
+          - button "health_and_safety Health" [ref=e108] [cursor=pointer]:
+            - generic [ref=e109]: health_and_safety
+            - text: Health
+    - generic [ref=e38]:
+      - button "help_outline" [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]: help_outline
+      - button "dark_mode" [ref=e41] [cursor=pointer]:
+        - generic [ref=e42]: dark_mode
+      - button "refresh" [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]: refresh
+      - generic [ref=e47]: Connected
+  - main [ref=e48]:
+    - complementary [ref=e49]:
+      - generic [ref=e50]:
+        - heading "Agents" [level=2] [ref=e51]
+        - button "chevron_left" [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]: chevron_left
+      - generic [ref=e54]:
+        - generic [ref=e110]:
+          - heading "account_tree Agents" [level=3] [ref=e111]:
+            - generic [ref=e112]: account_tree
+            - text: Agents
+          - list [ref=e113]:
+            - listitem [ref=e114]:
+              - generic [ref=e115] [cursor=pointer]:
+                - generic [ref=e116]: account_balance
+                - generic [ref=e117]: Mayor
+                - generic [ref=e118]: "1"
+              - list [ref=e119]:
+                - listitem [ref=e120]:
+                  - generic [ref=e121] [cursor=pointer]:
+                    - generic [ref=e122]: play_circle
+                    - generic [ref=e123]: mayor
+            - listitem [ref=e124]:
+              - generic [ref=e125] [cursor=pointer]:
+                - generic [ref=e126]: gavel
+                - generic [ref=e127]: Deacon
+                - generic [ref=e128]: "1"
+              - list [ref=e129]:
+                - listitem [ref=e130]:
+                  - generic [ref=e131] [cursor=pointer]:
+                    - generic [ref=e132]: play_circle
+                    - generic [ref=e133]: deacon
+            - listitem [ref=e134]:
+              - generic [ref=e135] [cursor=pointer]:
+                - generic [ref=e136]: smart_toy
+                - generic [ref=e137]: Polecats
+                - generic [ref=e138]: "8"
+              - list [ref=e139]:
+                - listitem [ref=e140]:
+                  - generic [ref=e141] [cursor=pointer]:
+                    - generic [ref=e142]: play_circle
+                    - generic [ref=e143]: chrome
+                - listitem [ref=e144]:
+                  - generic [ref=e145] [cursor=pointer]:
+                    - generic [ref=e146]: play_circle
+                    - generic [ref=e147]: rust
+                - listitem [ref=e148]:
+                  - generic [ref=e149] [cursor=pointer]:
+                    - generic [ref=e150]: play_circle
+                    - generic [ref=e151]: obsidian
+                - listitem [ref=e152]:
+                  - generic [ref=e153] [cursor=pointer]:
+                    - generic [ref=e154]: play_circle
+                    - generic [ref=e155]: chrome
+                - listitem [ref=e156]:
+                  - generic [ref=e157] [cursor=pointer]:
+                    - generic [ref=e158]: play_circle
+                    - generic [ref=e159]: rust
+                - listitem [ref=e160]:
+                  - generic [ref=e161] [cursor=pointer]:
+                    - generic [ref=e162]: play_circle
+                    - generic [ref=e163]: furiosa
+                - listitem [ref=e164]:
+                  - generic [ref=e165] [cursor=pointer]:
+                    - generic [ref=e166]: play_circle
+                    - generic [ref=e167]: nux
+                - listitem [ref=e168]:
+                  - generic [ref=e169] [cursor=pointer]:
+                    - generic [ref=e170]: play_circle
+                    - generic [ref=e171]: slit
+            - listitem [ref=e172]:
+              - generic [ref=e173] [cursor=pointer]:
+                - generic [ref=e174]: visibility
+                - generic [ref=e175]: Witnesses
+                - generic [ref=e176]: "5"
+              - list [ref=e177]:
+                - listitem [ref=e178]:
+                  - generic [ref=e179] [cursor=pointer]:
+                    - generic [ref=e180]: play_circle
+                    - generic [ref=e181]: witness
+                - listitem [ref=e182]:
+                  - generic [ref=e183] [cursor=pointer]:
+                    - generic [ref=e184]: play_circle
+                    - generic [ref=e185]: witness
+                - listitem [ref=e186]:
+                  - generic [ref=e187] [cursor=pointer]:
+                    - generic [ref=e188]: play_circle
+                    - generic [ref=e189]: witness
+                - listitem [ref=e190]:
+                  - generic [ref=e191] [cursor=pointer]:
+                    - generic [ref=e192]: play_circle
+                    - generic [ref=e193]: witness
+                - listitem [ref=e194]:
+                  - generic [ref=e195] [cursor=pointer]:
+                    - generic [ref=e196]: play_circle
+                    - generic [ref=e197]: witness
+            - listitem [ref=e198]:
+              - generic [ref=e199] [cursor=pointer]:
+                - generic [ref=e200]: precision_manufacturing
+                - generic [ref=e201]: Refineries
+                - generic [ref=e202]: "5"
+              - list [ref=e203]:
+                - listitem [ref=e204]:
+                  - generic [ref=e205] [cursor=pointer]:
+                    - generic [ref=e206]: play_circle
+                    - generic [ref=e207]: refinery
+                - listitem [ref=e208]:
+                  - generic [ref=e209] [cursor=pointer]:
+                    - generic [ref=e210]: play_circle
+                    - generic [ref=e211]: refinery
+                - listitem [ref=e212]:
+                  - generic [ref=e213] [cursor=pointer]:
+                    - generic [ref=e214]: play_circle
+                    - generic [ref=e215]: refinery
+                - listitem [ref=e216]:
+                  - generic [ref=e217] [cursor=pointer]:
+                    - generic [ref=e218]: play_circle
+                    - generic [ref=e219]: refinery
+                - listitem [ref=e220]:
+                  - generic [ref=e221] [cursor=pointer]:
+                    - generic [ref=e222]: play_circle
+                    - generic [ref=e223]: refinery
+            - listitem [ref=e224]:
+              - generic [ref=e225] [cursor=pointer]:
+                - generic [ref=e226]: settings
+                - generic [ref=e227]: System
+                - generic [ref=e228]: "1"
+              - list [ref=e229]:
+                - listitem [ref=e230]:
+                  - generic [ref=e231] [cursor=pointer]:
+                    - generic [ref=e232]: schedule
+                    - generic [ref=e233]: georgeb
+        - generic [ref=e234]:
+          - heading "settings_applications Services" [level=3] [ref=e235]:
+            - generic [ref=e236]: settings_applications
+            - text: Services
+          - generic [ref=e237]:
+            - generic [ref=e238]:
+              - generic [ref=e239]:
+                - generic [ref=e240]: account_balance
+                - generic [ref=e241]: Mayor
+                - generic [ref=e242]: Running
+              - generic [ref=e243]:
+                - button "stop" [ref=e244] [cursor=pointer]:
+                  - generic [ref=e245]: stop
+                - button "refresh" [ref=e246] [cursor=pointer]:
+                  - generic [ref=e247]: refresh
+            - generic [ref=e248]:
+              - generic [ref=e249]:
+                - generic [ref=e250]: settings
+                - generic [ref=e251]: Deacon
+                - generic [ref=e252]: Running
+              - generic [ref=e253]:
+                - button "stop" [ref=e254] [cursor=pointer]:
+                  - generic [ref=e255]: stop
+                - button "refresh" [ref=e256] [cursor=pointer]:
+                  - generic [ref=e257]: refresh
+            - generic [ref=e258]:
+              - generic [ref=e259]:
+                - generic [ref=e260]: visibility
+                - generic [ref=e261]: Witness
+                - generic [ref=e262]: Running
+              - generic [ref=e263]:
+                - button "stop" [ref=e264] [cursor=pointer]:
+                  - generic [ref=e265]: stop
+                - button "refresh" [ref=e266] [cursor=pointer]:
+                  - generic [ref=e267]: refresh
+            - generic [ref=e268]:
+              - generic [ref=e269]:
+                - generic [ref=e270]: precision_manufacturing
+                - generic [ref=e271]: Refinery
+                - generic [ref=e272]: Running
+              - generic [ref=e273]:
+                - button "stop" [ref=e274] [cursor=pointer]:
+                  - generic [ref=e275]: stop
+                - button "refresh" [ref=e276] [cursor=pointer]:
+                  - generic [ref=e277]: refresh
+        - generic [ref=e278]:
+          - heading "insights Stats" [level=3] [ref=e279]:
+            - generic [ref=e280]: insights
+            - text: Stats
+          - generic [ref=e281]:
+            - generic [ref=e282]:
+              - generic [ref=e283]: folder_special
+              - generic [ref=e284]:
+                - generic [ref=e285]: "5"
+                - generic [ref=e286]: Rigs
+            - generic [ref=e287]:
+              - generic [ref=e288]: person
+              - generic [ref=e289]:
+                - generic [ref=e290]: "20"
+                - generic [ref=e291]: Running
+            - generic [ref=e292]:
+              - generic [ref=e293]: pending
+              - generic [ref=e294]:
+                - generic [ref=e295]: "0"
+                - generic [ref=e296]: Working
+    - generic [ref=e491]:
+      - generic [ref=e492]:
+        - heading "All Mail" [level=1] [ref=e493]
+        - generic [ref=e494]:
+          - generic [ref=e495]:
+            - button "inbox My Inbox" [ref=e496] [cursor=pointer]:
+              - generic [ref=e497]: inbox
+              - text: My Inbox
+            - button "forum All Mail" [ref=e498] [cursor=pointer]:
+              - generic [ref=e499]: forum
+              - text: All Mail
+          - button "edit Compose" [ref=e500] [cursor=pointer]:
+            - generic [ref=e501]: edit
+            - text: Compose
+      - generic [ref=e502]:
+        - generic [ref=e503]:
+          - generic [ref=e504]:
+            - generic [ref=e505]:
+              - generic [ref=e506]: Agent Type
+              - combobox [ref=e507] [cursor=pointer]:
+                - option "All Types" [selected]
+                - option "Mayor"
+                - option "Witness"
+                - option "Deacon"
+                - option "Refinery"
+                - option "Polecat"
+                - option "Crew"
+                - option "Human"
+                - option "System"
+            - generic [ref=e508]:
+              - generic [ref=e509]: Rig
+              - combobox [ref=e510] [cursor=pointer]:
+                - option "All Rigs" [selected]
+                - option "deacon"
+                - option "films_to_fly_to"
+                - option "igor"
+                - option "overseer"
+            - generic [ref=e511]:
+              - generic [ref=e512]: Signal
+              - combobox [ref=e513] [cursor=pointer]:
+                - option "All Signals" [selected]
+                - option "Action Needed"
+                - option "Recovery"
+                - option "Crashes"
+                - option "Escalations"
+                - option "Delivery"
+                - option "System"
+            - generic [ref=e514]:
+              - generic [ref=e515]: Search
+              - textbox "Search mail..." [ref=e516]
+            - button "clear" [ref=e517] [cursor=pointer]:
+              - generic [ref=e518]: clear
+          - generic [ref=e519]:
+            - generic [ref=e520]:
+              - generic [ref=e521]: account_balance
+              - text: Mayor
+            - generic [ref=e522]:
+              - generic [ref=e523]: visibility
+              - text: Witness
+            - generic [ref=e524]:
+              - generic [ref=e525]: gavel
+              - text: Deacon
+            - generic [ref=e526]:
+              - generic [ref=e527]: precision_manufacturing
+              - text: Refinery
+            - generic [ref=e528]:
+              - generic [ref=e529]: smart_toy
+              - text: Polecat
+            - generic [ref=e530]:
+              - generic [ref=e531]: groups
+              - text: Crew
+            - generic [ref=e532]:
+              - generic [ref=e533]: person
+              - text: Human
+            - generic [ref=e534]:
+              - generic [ref=e535]: settings
+              - text: System
+        - generic [ref=e536]:
+          - generic [ref=e537]:
+            - generic [ref=e538]: forum
+            - text: 28 visible
+          - generic [ref=e539]:
+            - generic [ref=e540]: notification_important
+            - text: 3 action needed
+          - generic [ref=e541]:
+            - generic [ref=e542]: warning
+            - text: 0 crashes
+          - generic [ref=e543]:
+            - generic [ref=e544]: build_circle
+            - text: 0 recovery
+          - generic [ref=e545]:
+            - generic [ref=e546]: priority_high
+            - text: 0 escalations
+        - generic [ref=e547] [cursor=pointer]:
+          - generic [ref=e549]: forward_to_inbox
+          - generic [ref=e550]:
+            - generic [ref=e551]:
+              - generic [ref=e552]:
+                - generic [ref=e553]:
+                  - generic [ref=e554]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e555]:
+                  - generic [ref=e556]: account_balance
+                  - text: mayor
+              - generic [ref=e557]: Sat
+            - generic [ref=e558]:
+              - generic [ref=e559]: "Convoy complete: Work: Work view: add priority filter and group-by-rig for backlog triage"
+              - generic [ref=e560]:
+                - generic [ref=e561]: forward_to_inbox
+                - text: Delivery
+        - generic [ref=e562] [cursor=pointer]:
+          - generic [ref=e564]: forward_to_inbox
+          - generic [ref=e565]:
+            - generic [ref=e566]:
+              - generic [ref=e567]:
+                - generic [ref=e568]:
+                  - generic [ref=e569]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e570]:
+                  - generic [ref=e571]: account_balance
+                  - text: mayor
+              - generic [ref=e572]: Sat
+            - generic [ref=e573]:
+              - generic [ref=e574]: "Convoy complete: Work: Igor: revise design doc — Open WebUI backend + cross-platform + my Opus review notes"
+              - generic [ref=e575]:
+                - generic [ref=e576]: forward_to_inbox
+                - text: Delivery
+        - generic [ref=e577] [cursor=pointer]:
+          - generic [ref=e579]: forward_to_inbox
+          - generic [ref=e580]:
+            - generic [ref=e581]:
+              - generic [ref=e582]:
+                - generic [ref=e583]:
+                  - generic [ref=e584]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e585]:
+                  - generic [ref=e586]: account_balance
+                  - text: mayor
+              - generic [ref=e587]: Sat
+            - generic [ref=e588]:
+              - generic [ref=e589]: "Convoy complete: Work: Igor: revise design doc — Open WebUI backend + cross-platform + my Opus review notes"
+              - generic [ref=e590]:
+                - generic [ref=e591]: forward_to_inbox
+                - text: Delivery
+        - generic [ref=e592] [cursor=pointer]:
+          - generic [ref=e594]: settings
+          - generic [ref=e595]:
+            - generic [ref=e596]:
+              - generic [ref=e597]:
+                - generic [ref=e598]:
+                  - generic [ref=e599]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e600]:
+                  - generic [ref=e601]: account_balance
+                  - text: mayor
+              - generic [ref=e602]: 00:18
+            - generic [ref=e603]:
+              - generic [ref=e604]: "Convoy complete: Work: Igor: fix post-merge test failures and lint errors in ig-l4a code"
+              - generic [ref=e605]:
+                - generic [ref=e606]: settings
+                - text: System
+        - generic [ref=e607] [cursor=pointer]:
+          - generic [ref=e609]: settings
+          - generic [ref=e610]:
+            - generic [ref=e611]:
+              - generic [ref=e612]:
+                - generic [ref=e613]:
+                  - generic [ref=e614]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e615]:
+                  - generic [ref=e616]: account_balance
+                  - text: mayor
+              - generic [ref=e617]: 00:17
+            - generic [ref=e618]:
+              - generic [ref=e619]: "Convoy complete: Work: Igor: persist session transcripts to JSONL per design"
+              - generic [ref=e620]:
+                - generic [ref=e621]: settings
+                - text: System
+        - generic [ref=e622] [cursor=pointer]:
+          - generic [ref=e624]: settings
+          - generic [ref=e625]:
+            - generic [ref=e626]:
+              - generic [ref=e627]:
+                - generic [ref=e628]:
+                  - generic [ref=e629]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e630]:
+                  - generic [ref=e631]: account_balance
+                  - text: mayor
+              - generic [ref=e632]: 00:16
+            - generic [ref=e633]:
+              - generic [ref=e634]: "Convoy complete: Work: Igor: wire SessionManager into FastAPI /v1/chat/completions endpoint"
+              - generic [ref=e635]:
+                - generic [ref=e636]: settings
+                - text: System
+        - generic [ref=e637] [cursor=pointer]:
+          - generic [ref=e639]: settings
+          - generic [ref=e640]:
+            - generic [ref=e641]:
+              - generic [ref=e642]:
+                - generic [ref=e643]:
+                  - generic [ref=e644]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e645]:
+                  - generic [ref=e646]: account_balance
+                  - text: mayor
+              - generic [ref=e647]: Sat
+            - generic [ref=e648]:
+              - generic [ref=e649]: "Convoy complete: Work: Igor: PTY-based claude subprocess wrapper (SessionManager)"
+              - generic [ref=e650]:
+                - generic [ref=e651]: settings
+                - text: System
+        - generic [ref=e652] [cursor=pointer]:
+          - generic [ref=e654]: settings
+          - generic [ref=e655]:
+            - generic [ref=e656]:
+              - generic [ref=e657]:
+                - generic [ref=e658]:
+                  - generic [ref=e659]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e660]:
+                  - generic [ref=e661]: account_balance
+                  - text: mayor
+              - generic [ref=e662]: Sat
+            - generic [ref=e663]:
+              - generic [ref=e664]: "Convoy complete: Work: Work view: add per-card \"Sling\" action with dispatch modal"
+              - generic [ref=e665]:
+                - generic [ref=e666]: settings
+                - text: System
+        - generic [ref=e667] [cursor=pointer]:
+          - generic [ref=e669]: settings
+          - generic [ref=e670]:
+            - generic [ref=e671]:
+              - generic [ref=e672]:
+                - generic [ref=e673]:
+                  - generic [ref=e674]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e675]:
+                  - generic [ref=e676]: account_balance
+                  - text: mayor
+              - generic [ref=e677]: Sat
+            - generic [ref=e678]:
+              - generic [ref=e679]: "Convoy complete: Work: Igor: implement project skeleton and first FastAPI server"
+              - generic [ref=e680]:
+                - generic [ref=e681]: settings
+                - text: System
+        - generic [ref=e682] [cursor=pointer]:
+          - generic [ref=e684]: settings
+          - generic [ref=e685]:
+            - generic [ref=e686]:
+              - generic [ref=e687]:
+                - generic [ref=e688]:
+                  - generic [ref=e689]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e690]:
+                  - generic [ref=e691]: account_balance
+                  - text: mayor
+              - generic [ref=e692]: Sat
+            - generic [ref=e693]:
+              - generic [ref=e694]: "Convoy complete: Work: Work view only shows beads from gastown_gui rig — should aggregate across town"
+              - generic [ref=e695]:
+                - generic [ref=e696]: settings
+                - text: System
+        - generic [ref=e697] [cursor=pointer]:
+          - generic [ref=e699]: settings
+          - generic [ref=e700]:
+            - generic [ref=e701]:
+              - generic [ref=e702]:
+                - generic [ref=e703]:
+                  - generic [ref=e704]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e705]:
+                  - generic [ref=e706]: account_balance
+                  - text: mayor
+              - generic [ref=e707]: Sat
+            - generic [ref=e708]:
+              - generic [ref=e709]: "Convoy complete: Work: Igor: setup, dependencies, and prerequisites"
+              - generic [ref=e710]:
+                - generic [ref=e711]: settings
+                - text: System
+        - generic [ref=e712] [cursor=pointer]:
+          - generic [ref=e714]: settings
+          - generic [ref=e715]:
+            - generic [ref=e716]:
+              - generic [ref=e717]:
+                - generic [ref=e718]:
+                  - generic [ref=e719]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e720]:
+                  - generic [ref=e721]: account_balance
+                  - text: mayor
+              - generic [ref=e722]: Sat
+            - generic [ref=e723]:
+              - generic [ref=e724]: "Convoy complete: Work: Igor: testing architecture and decisions"
+              - generic [ref=e725]:
+                - generic [ref=e726]: settings
+                - text: System
+        - generic [ref=e727] [cursor=pointer]:
+          - generic [ref=e729]: settings
+          - generic [ref=e730]:
+            - generic [ref=e731]:
+              - generic [ref=e732]:
+                - generic [ref=e733]:
+                  - generic [ref=e734]: account_balance
+                  - text: mayor
+                - text: →
+                - generic [ref=e735]:
+                  - generic [ref=e736]: gavel
+                  - text: deacon
+              - generic [ref=e737]: Sat
+            - generic [ref=e738]:
+              - generic [ref=e739]: "Re: PATTERN: 4 unmerged polecat branches - triaged, all benign"
+              - generic [ref=e740]:
+                - generic [ref=e741]: settings
+                - text: System
+        - generic [ref=e742] [cursor=pointer]:
+          - generic [ref=e744]: settings
+          - generic [ref=e745]:
+            - generic [ref=e746]:
+              - generic [ref=e747]:
+                - generic [ref=e748]:
+                  - generic [ref=e749]: gavel
+                  - text: deacon
+                - text: →
+                - generic [ref=e750]:
+                  - generic [ref=e751]: account_balance
+                  - text: mayor
+              - generic [ref=e752]: Sat
+            - generic [ref=e753]:
+              - generic [ref=e754]: "PATTERN: 4 unmerged polecat branches across town, refinery queues all empty"
+              - generic [ref=e755]:
+                - generic [ref=e756]: settings
+                - text: System
+        - generic [ref=e757] [cursor=pointer]:
+          - generic [ref=e759]: settings
+          - generic [ref=e760]:
+            - generic [ref=e761]:
+              - generic [ref=e762]:
+                - generic [ref=e763]:
+                  - generic [ref=e764]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e765]:
+                  - generic [ref=e766]: account_balance
+                  - text: mayor
+              - generic [ref=e767]: Sat
+            - generic [ref=e768]:
+              - generic [ref=e769]: "Convoy complete: Work: Igor: high-level design doc for personal Claude session server"
+              - generic [ref=e770]:
+                - generic [ref=e771]: settings
+                - text: System
+        - generic [ref=e772] [cursor=pointer]:
+          - generic [ref=e774]: settings
+          - generic [ref=e775]:
+            - generic [ref=e776]:
+              - generic [ref=e777]:
+                - generic [ref=e778]:
+                  - generic [ref=e779]: gavel
+                  - text: deacon
+                - text: →
+                - generic [ref=e780]:
+                  - generic [ref=e781]: account_balance
+                  - text: mayor
+              - generic [ref=e782]: Sat
+            - generic [ref=e783]:
+              - generic [ref=e784]: "hq-33r: igor refinery now responsive - safe to close?"
+              - generic [ref=e785]:
+                - generic [ref=e786]: settings
+                - text: System
+        - generic [ref=e787] [cursor=pointer]:
+          - generic [ref=e789]: settings
+          - generic [ref=e790]:
+            - generic [ref=e791]:
+              - generic [ref=e792]:
+                - generic [ref=e793]:
+                  - generic [ref=e794]: gavel
+                  - text: deacon
+                - text: →
+                - generic [ref=e795]:
+                  - generic [ref=e796]: account_balance
+                  - text: mayor
+              - generic [ref=e797]: Sat
+            - generic [ref=e798]:
+              - generic [ref=e799]: "FYI: igor/furiosa stuck working, 3 commits unmerged"
+              - generic [ref=e800]:
+                - generic [ref=e801]: settings
+                - text: System
+        - generic [ref=e802] [cursor=pointer]:
+          - generic [ref=e804]: settings
+          - generic [ref=e805]:
+            - generic [ref=e806]:
+              - generic [ref=e807]:
+                - generic [ref=e808]:
+                  - generic [ref=e809]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e810]:
+                  - generic [ref=e811]: account_balance
+                  - text: mayor
+              - generic [ref=e812]: Sat
+            - generic [ref=e813]:
+              - generic [ref=e814]: "Convoy complete: Work: Igor: feature list (P0/P1/P2) for personal Claude session server"
+              - generic [ref=e815]:
+                - generic [ref=e816]: settings
+                - text: System
+        - generic [ref=e817] [cursor=pointer]:
+          - generic [ref=e819]: settings
+          - generic [ref=e820]:
+            - generic [ref=e821]:
+              - generic [ref=e822]:
+                - generic [ref=e823]:
+                  - generic [ref=e824]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e825]:
+                  - generic [ref=e826]: account_balance
+                  - text: mayor
+              - generic [ref=e827]: Sat
+            - generic [ref=e828]:
+              - generic [ref=e829]: "Convoy complete: Work: Filter gt:agent infra beads out of Open Tasks view"
+              - generic [ref=e830]:
+                - generic [ref=e831]: settings
+                - text: System
+        - generic [ref=e832] [cursor=pointer]:
+          - generic [ref=e834]: settings
+          - generic [ref=e835]:
+            - generic [ref=e836]:
+              - generic [ref=e837]:
+                - generic [ref=e838]:
+                  - generic [ref=e839]: precision_manufacturing
+                  - text: refinery
+                - text: →
+                - generic [ref=e840]:
+                  - generic [ref=e841]: visibility
+                  - text: witness
+              - generic [ref=e842]: Sat
+            - generic [ref=e843]:
+              - generic [ref=e844]: MERGED ftft-wisp-355
+              - generic [ref=e845]:
+                - generic [ref=e846]: settings
+                - text: System
+        - generic [ref=e847] [cursor=pointer]:
+          - generic [ref=e849]: settings
+          - generic [ref=e850]:
+            - generic [ref=e851]:
+              - generic [ref=e852]:
+                - generic [ref=e853]:
+                  - generic [ref=e854]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e855]:
+                  - generic [ref=e856]: account_balance
+                  - text: mayor
+              - generic [ref=e857]: Sat
+            - generic [ref=e858]:
+              - generic [ref=e859]: "Convoy complete: Work: Research: BA in-flight catalog ingestion (start with entertainment.ba.com/en/movies)"
+              - generic [ref=e860]:
+                - generic [ref=e861]: settings
+                - text: System
+        - generic [ref=e862] [cursor=pointer]:
+          - generic [ref=e864]: settings
+          - generic [ref=e865]:
+            - generic [ref=e866]:
+              - generic [ref=e867]:
+                - generic [ref=e868]:
+                  - generic [ref=e869]: precision_manufacturing
+                  - text: refinery
+                - text: →
+                - generic [ref=e870]:
+                  - generic [ref=e871]: visibility
+                  - text: witness
+              - generic [ref=e872]: Sat
+            - generic [ref=e873]:
+              - generic [ref=e874]: MERGED ftft-wisp-ln4
+              - generic [ref=e875]:
+                - generic [ref=e876]: settings
+                - text: System
+        - generic [ref=e877] [cursor=pointer]:
+          - generic [ref=e879]: settings
+          - generic [ref=e880]:
+            - generic [ref=e881]:
+              - generic [ref=e882]:
+                - generic [ref=e883]:
+                  - generic [ref=e884]: settings
+                  - text: overseer
+                - text: →
+                - generic [ref=e885]:
+                  - generic [ref=e886]: account_balance
+                  - text: mayor
+              - generic [ref=e887]: Sat
+            - generic [ref=e888]:
+              - generic [ref=e889]: "Convoy complete: Work: Decide rating data source (OMDb / TMDb / Letterboxd scrape)"
+              - generic [ref=e890]:
+                - generic [ref=e891]: settings
+                - text: System
+        - generic [ref=e892] [cursor=pointer]:
+          - generic [ref=e894]: settings
+          - generic [ref=e895]:
+            - generic [ref=e896]:
+              - generic [ref=e897]:
+                - generic [ref=e898]:
+                  - generic [ref=e899]: visibility
+                  - text: witness
+                - text: →
+                - generic [ref=e900]:
+                  - generic [ref=e901]: account_balance
+                  - text: mayor
+              - generic [ref=e902]: Sat
+            - generic [ref=e903]:
+              - generic [ref=e904]: "STALL: rust polecat session stopped mid-research on ftft-93c"
+              - generic [ref=e905]:
+                - generic [ref=e906]: settings
+                - text: System
+        - generic [ref=e907] [cursor=pointer]:
+          - generic [ref=e909]: settings
+          - generic [ref=e910]:
+            - generic [ref=e911]:
+              - generic [ref=e912]:
+                - generic [ref=e913]:
+                  - generic [ref=e914]: account_balance
+                  - text: mayor
+                - text: →
+                - generic [ref=e915]:
+                  - generic [ref=e916]: visibility
+                  - text: witness
+              - generic [ref=e917]: Sat
+            - generic [ref=e918]:
+              - generic [ref=e919]: "Re: Furiosa orphan: branch pushed, MR never enqueued"
+              - generic [ref=e920]:
+                - generic [ref=e921]: settings
+                - text: System
+        - generic [ref=e922] [cursor=pointer]:
+          - generic [ref=e924]: settings
+          - generic [ref=e925]:
+            - generic [ref=e926]:
+              - generic [ref=e927]:
+                - generic [ref=e928]:
+                  - generic [ref=e929]: visibility
+                  - text: witness
+                - text: →
+                - generic [ref=e930]:
+                  - generic [ref=e931]: account_balance
+                  - text: mayor
+              - generic [ref=e932]: Sat
+            - generic [ref=e933]:
+              - generic [ref=e934]: "Furiosa orphan: branch pushed, MR never enqueued"
+              - generic [ref=e935]:
+                - generic [ref=e936]: settings
+                - text: System
+        - generic [ref=e937] [cursor=pointer]:
+          - generic [ref=e939]: settings
+          - generic [ref=e940]:
+            - generic [ref=e941]:
+              - generic [ref=e942]:
+                - generic [ref=e943]:
+                  - generic [ref=e944]: visibility
+                  - text: witness
+                - text: →
+                - generic [ref=e945]:
+                  - generic [ref=e946]: gavel
+                  - text: deacon
+              - generic [ref=e947]: Sat
+            - generic [ref=e948]:
+              - generic [ref=e949]: "Re: furiosa stale lifecycle - confirmed, no MR"
+              - generic [ref=e950]:
+                - generic [ref=e951]: settings
+                - text: System
+        - generic [ref=e952] [cursor=pointer]:
+          - generic [ref=e954]: settings
+          - generic [ref=e955]:
+            - generic [ref=e956]:
+              - generic [ref=e957]:
+                - generic [ref=e958]:
+                  - generic [ref=e959]: gavel
+                  - text: deacon
+                - text: →
+                - generic [ref=e960]:
+                  - generic [ref=e961]: visibility
+                  - text: witness
+              - generic [ref=e962]: Sat
+            - generic [ref=e963]:
+              - generic [ref=e964]: "Re: furiosa stale lifecycle - confirmed, no MR"
+              - generic [ref=e965]:
+                - generic [ref=e966]: settings
+                - text: System
+    - complementary [ref=e71]:
+      - generic [ref=e72]:
+        - heading "Activity" [level=2] [ref=e73]
+        - button "clear_all" [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: clear_all
+  - contentinfo [ref=e77]:
+    - generic [ref=e79]:
+      - generic [ref=e80]: anchor
+      - generic [ref=e81]: No work hooked
+    - generic [ref=e83]: Ready
+    - generic [ref=e85]:
+      - text: Press
+      - generic [ref=e86]: "?"
+      - text: for help

@@ -1,0 +1,439 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img "Gas Town" [ref=e6]
+        - generic [ref=e7]: GAS TOWN
+      - generic [ref=e8]: footy
+      - generic [ref=e9]:
+        - generic [ref=e10]: assistant
+        - textbox "Tell Mayor what to build..." [ref=e11]
+        - button "send" [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: send
+        - button "visibility" [ref=e14] [cursor=pointer]:
+          - generic [ref=e15]: visibility
+    - generic [ref=e17]:
+      - button "dashboard Overview" [ref=e18] [cursor=pointer]:
+        - generic [ref=e19]: dashboard
+        - generic [ref=e20]: Overview
+      - button "local_shipping Convoys" [ref=e21] [cursor=pointer]:
+        - generic [ref=e22]: local_shipping
+        - generic [ref=e23]: Convoys
+      - button "task_alt Work" [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]: task_alt
+        - generic [ref=e26]: Work
+      - button "groups Agents" [ref=e27] [cursor=pointer]:
+        - generic [ref=e28]: groups
+        - generic [ref=e29]: Agents
+      - button "folder_special Rigs" [ref=e30] [cursor=pointer]:
+        - generic [ref=e31]: folder_special
+        - generic [ref=e32]: Rigs
+      - generic [ref=e33]:
+        - button "more_horiz More 28 expand_more More options" [active] [ref=e473] [cursor=pointer]:
+          - generic [ref=e35]: more_horiz
+          - generic [ref=e36]: More
+          - generic [ref=e93]: "28"
+          - generic [ref=e37]: expand_more
+          - text: More options
+        - generic [ref=e474]:
+          - button "groups Crews" [ref=e475] [cursor=pointer]:
+            - generic [ref=e476]: groups
+            - text: Crews
+          - button "science Formulas" [ref=e477] [cursor=pointer]:
+            - generic [ref=e478]: science
+            - text: Formulas
+          - button "merge_type Pull Requests" [ref=e480] [cursor=pointer]:
+            - generic [ref=e481]: merge_type
+            - text: Pull Requests
+          - button "bug_report Issues" [ref=e482] [cursor=pointer]:
+            - generic [ref=e483]: bug_report
+            - text: Issues
+          - button "mail Mail 28" [ref=e485] [cursor=pointer]:
+            - generic [ref=e486]: mail
+            - text: Mail
+            - generic [ref=e487]: "28"
+          - button "health_and_safety Health" [ref=e488] [cursor=pointer]:
+            - generic [ref=e489]: health_and_safety
+            - text: Health
+    - generic [ref=e38]:
+      - button "help_outline" [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]: help_outline
+      - button "dark_mode" [ref=e41] [cursor=pointer]:
+        - generic [ref=e42]: dark_mode
+      - button "refresh" [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]: refresh
+      - generic [ref=e47]: Connected
+  - main [ref=e48]:
+    - complementary [ref=e49]:
+      - generic [ref=e50]:
+        - heading "Agents" [level=2] [ref=e51]
+        - button "chevron_left" [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]: chevron_left
+      - generic [ref=e54]:
+        - generic [ref=e94]:
+          - heading "account_tree Agents" [level=3] [ref=e95]:
+            - generic [ref=e96]: account_tree
+            - text: Agents
+          - list [ref=e97]:
+            - listitem [ref=e98]:
+              - generic [ref=e99] [cursor=pointer]:
+                - generic [ref=e100]: account_balance
+                - generic [ref=e101]: Mayor
+                - generic [ref=e102]: "1"
+              - list [ref=e103]:
+                - listitem [ref=e104]:
+                  - generic [ref=e105] [cursor=pointer]:
+                    - generic [ref=e106]: play_circle
+                    - generic [ref=e107]: mayor
+            - listitem [ref=e108]:
+              - generic [ref=e109] [cursor=pointer]:
+                - generic [ref=e110]: gavel
+                - generic [ref=e111]: Deacon
+                - generic [ref=e112]: "1"
+              - list [ref=e113]:
+                - listitem [ref=e114]:
+                  - generic [ref=e115] [cursor=pointer]:
+                    - generic [ref=e116]: play_circle
+                    - generic [ref=e117]: deacon
+            - listitem [ref=e118]:
+              - generic [ref=e119] [cursor=pointer]:
+                - generic [ref=e120]: smart_toy
+                - generic [ref=e121]: Polecats
+                - generic [ref=e122]: "8"
+              - list [ref=e123]:
+                - listitem [ref=e124]:
+                  - generic [ref=e125] [cursor=pointer]:
+                    - generic [ref=e126]: play_circle
+                    - generic [ref=e127]: chrome
+                - listitem [ref=e128]:
+                  - generic [ref=e129] [cursor=pointer]:
+                    - generic [ref=e130]: play_circle
+                    - generic [ref=e131]: rust
+                - listitem [ref=e132]:
+                  - generic [ref=e133] [cursor=pointer]:
+                    - generic [ref=e134]: play_circle
+                    - generic [ref=e135]: obsidian
+                - listitem [ref=e136]:
+                  - generic [ref=e137] [cursor=pointer]:
+                    - generic [ref=e138]: play_circle
+                    - generic [ref=e139]: chrome
+                - listitem [ref=e140]:
+                  - generic [ref=e141] [cursor=pointer]:
+                    - generic [ref=e142]: play_circle
+                    - generic [ref=e143]: rust
+                - listitem [ref=e144]:
+                  - generic [ref=e145] [cursor=pointer]:
+                    - generic [ref=e146]: play_circle
+                    - generic [ref=e147]: furiosa
+                - listitem [ref=e148]:
+                  - generic [ref=e149] [cursor=pointer]:
+                    - generic [ref=e150]: play_circle
+                    - generic [ref=e151]: nux
+                - listitem [ref=e152]:
+                  - generic [ref=e153] [cursor=pointer]:
+                    - generic [ref=e154]: play_circle
+                    - generic [ref=e155]: slit
+            - listitem [ref=e156]:
+              - generic [ref=e157] [cursor=pointer]:
+                - generic [ref=e158]: visibility
+                - generic [ref=e159]: Witnesses
+                - generic [ref=e160]: "5"
+              - list [ref=e161]:
+                - listitem [ref=e162]:
+                  - generic [ref=e163] [cursor=pointer]:
+                    - generic [ref=e164]: play_circle
+                    - generic [ref=e165]: witness
+                - listitem [ref=e166]:
+                  - generic [ref=e167] [cursor=pointer]:
+                    - generic [ref=e168]: play_circle
+                    - generic [ref=e169]: witness
+                - listitem [ref=e170]:
+                  - generic [ref=e171] [cursor=pointer]:
+                    - generic [ref=e172]: play_circle
+                    - generic [ref=e173]: witness
+                - listitem [ref=e174]:
+                  - generic [ref=e175] [cursor=pointer]:
+                    - generic [ref=e176]: play_circle
+                    - generic [ref=e177]: witness
+                - listitem [ref=e178]:
+                  - generic [ref=e179] [cursor=pointer]:
+                    - generic [ref=e180]: play_circle
+                    - generic [ref=e181]: witness
+            - listitem [ref=e182]:
+              - generic [ref=e183] [cursor=pointer]:
+                - generic [ref=e184]: precision_manufacturing
+                - generic [ref=e185]: Refineries
+                - generic [ref=e186]: "5"
+              - list [ref=e187]:
+                - listitem [ref=e188]:
+                  - generic [ref=e189] [cursor=pointer]:
+                    - generic [ref=e190]: play_circle
+                    - generic [ref=e191]: refinery
+                - listitem [ref=e192]:
+                  - generic [ref=e193] [cursor=pointer]:
+                    - generic [ref=e194]: play_circle
+                    - generic [ref=e195]: refinery
+                - listitem [ref=e196]:
+                  - generic [ref=e197] [cursor=pointer]:
+                    - generic [ref=e198]: play_circle
+                    - generic [ref=e199]: refinery
+                - listitem [ref=e200]:
+                  - generic [ref=e201] [cursor=pointer]:
+                    - generic [ref=e202]: play_circle
+                    - generic [ref=e203]: refinery
+                - listitem [ref=e204]:
+                  - generic [ref=e205] [cursor=pointer]:
+                    - generic [ref=e206]: play_circle
+                    - generic [ref=e207]: refinery
+            - listitem [ref=e208]:
+              - generic [ref=e209] [cursor=pointer]:
+                - generic [ref=e210]: settings
+                - generic [ref=e211]: System
+                - generic [ref=e212]: "1"
+              - list [ref=e213]:
+                - listitem [ref=e214]:
+                  - generic [ref=e215] [cursor=pointer]:
+                    - generic [ref=e216]: schedule
+                    - generic [ref=e217]: georgeb
+        - generic [ref=e218]:
+          - heading "settings_applications Services" [level=3] [ref=e219]:
+            - generic [ref=e220]: settings_applications
+            - text: Services
+          - generic [ref=e221]:
+            - generic [ref=e222]:
+              - generic [ref=e223]:
+                - generic [ref=e224]: account_balance
+                - generic [ref=e225]: Mayor
+                - generic [ref=e226]: Running
+              - generic [ref=e227]:
+                - button "stop" [ref=e228] [cursor=pointer]:
+                  - generic [ref=e229]: stop
+                - button "refresh" [ref=e230] [cursor=pointer]:
+                  - generic [ref=e231]: refresh
+            - generic [ref=e232]:
+              - generic [ref=e233]:
+                - generic [ref=e234]: settings
+                - generic [ref=e235]: Deacon
+                - generic [ref=e236]: Running
+              - generic [ref=e237]:
+                - button "stop" [ref=e238] [cursor=pointer]:
+                  - generic [ref=e239]: stop
+                - button "refresh" [ref=e240] [cursor=pointer]:
+                  - generic [ref=e241]: refresh
+            - generic [ref=e242]:
+              - generic [ref=e243]:
+                - generic [ref=e244]: visibility
+                - generic [ref=e245]: Witness
+                - generic [ref=e246]: Running
+              - generic [ref=e247]:
+                - button "stop" [ref=e248] [cursor=pointer]:
+                  - generic [ref=e249]: stop
+                - button "refresh" [ref=e250] [cursor=pointer]:
+                  - generic [ref=e251]: refresh
+            - generic [ref=e252]:
+              - generic [ref=e253]:
+                - generic [ref=e254]: precision_manufacturing
+                - generic [ref=e255]: Refinery
+                - generic [ref=e256]: Running
+              - generic [ref=e257]:
+                - button "stop" [ref=e258] [cursor=pointer]:
+                  - generic [ref=e259]: stop
+                - button "refresh" [ref=e260] [cursor=pointer]:
+                  - generic [ref=e261]: refresh
+        - generic [ref=e262]:
+          - heading "insights Stats" [level=3] [ref=e263]:
+            - generic [ref=e264]: insights
+            - text: Stats
+          - generic [ref=e265]:
+            - generic [ref=e266]:
+              - generic [ref=e267]: folder_special
+              - generic [ref=e268]:
+                - generic [ref=e269]: "5"
+                - generic [ref=e270]: Rigs
+            - generic [ref=e271]:
+              - generic [ref=e272]: person
+              - generic [ref=e273]:
+                - generic [ref=e274]: "20"
+                - generic [ref=e275]: Running
+            - generic [ref=e276]:
+              - generic [ref=e277]: pending
+              - generic [ref=e278]:
+                - generic [ref=e279]: "0"
+                - generic [ref=e280]: Working
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - heading "System Overview" [level=1] [ref=e58]
+        - button "refresh Refresh" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: refresh
+          - text: Refresh
+      - generic [ref=e62]:
+        - generic [ref=e281]:
+          - generic [ref=e283]: check_circle
+          - generic [ref=e284]:
+            - generic [ref=e285]: All Systems Go
+            - generic [ref=e286]: System health check
+          - button "View Details arrow_forward" [ref=e287] [cursor=pointer]:
+            - text: View Details
+            - generic [ref=e288]: arrow_forward
+        - generic [ref=e289]:
+          - generic [ref=e290] [cursor=pointer]:
+            - generic [ref=e292]: local_shipping
+            - generic [ref=e293]:
+              - generic [ref=e294]: "1"
+              - generic [ref=e295]: Active Convoys
+              - generic [ref=e296]: 1 of 20
+          - generic [ref=e299] [cursor=pointer]:
+            - generic [ref=e301]: task_alt
+            - generic [ref=e302]:
+              - generic [ref=e303]: "33"
+              - generic [ref=e304]: Open Work
+              - generic [ref=e305]: 33 of 33
+          - generic [ref=e308] [cursor=pointer]:
+            - generic [ref=e310]: smart_toy
+            - generic [ref=e311]:
+              - generic [ref=e312]: "20"
+              - generic [ref=e313]: Active Agents
+              - generic [ref=e314]: 20 available
+          - generic [ref=e315] [cursor=pointer]:
+            - generic [ref=e317]: mail
+            - generic [ref=e318]:
+              - generic [ref=e319]: "28"
+              - generic [ref=e320]: Mail Events
+        - generic [ref=e322]:
+          - generic [ref=e323]:
+            - generic [ref=e324]:
+              - generic [ref=e325]: bolt
+              - heading "Quick Actions" [level=3] [ref=e326]
+            - generic [ref=e328]:
+              - button "add_circle New Bead" [ref=e329] [cursor=pointer]:
+                - generic [ref=e330]: add_circle
+                - generic [ref=e331]: New Bead
+              - button "send Sling Work" [ref=e332] [cursor=pointer]:
+                - generic [ref=e333]: send
+                - generic [ref=e334]: Sling Work
+              - button "local_shipping New Convoy" [ref=e335] [cursor=pointer]:
+                - generic [ref=e336]: local_shipping
+                - generic [ref=e337]: New Convoy
+              - button "edit Send Mail" [ref=e338] [cursor=pointer]:
+                - generic [ref=e339]: edit
+                - generic [ref=e340]: Send Mail
+              - button "folder_special Add Rig" [ref=e341] [cursor=pointer]:
+                - generic [ref=e342]: folder_special
+                - generic [ref=e343]: Add Rig
+              - button "health_and_safety Health Check" [ref=e344] [cursor=pointer]:
+                - generic [ref=e345]: health_and_safety
+                - generic [ref=e346]: Health Check
+          - generic [ref=e347]:
+            - generic [ref=e348]:
+              - generic [ref=e349]: monitoring
+              - heading "Agent Status" [level=3] [ref=e350]
+            - generic [ref=e352]:
+              - generic [ref=e353]:
+                - generic [ref=e355]: account_balance
+                - generic [ref=e356]:
+                  - generic [ref=e357]: Mayor
+                  - generic [ref=e358]: 1 available
+                - generic [ref=e362]: check_circle
+              - generic [ref=e363]:
+                - generic [ref=e365]: gavel
+                - generic [ref=e366]:
+                  - generic [ref=e367]: Deacon
+                  - generic [ref=e368]: 1 available
+                - generic [ref=e372]: check_circle
+              - generic [ref=e373]:
+                - generic [ref=e375]: visibility
+                - generic [ref=e376]:
+                  - generic [ref=e377]: Witness
+                  - generic [ref=e378]: 5 available
+                - generic [ref=e382]: check_circle
+              - generic [ref=e383]:
+                - generic [ref=e385]: precision_manufacturing
+                - generic [ref=e386]:
+                  - generic [ref=e387]: Refinery
+                  - generic [ref=e388]: 5 available
+                - generic [ref=e392]: check_circle
+              - generic [ref=e393]:
+                - generic [ref=e395]: smart_toy
+                - generic [ref=e396]:
+                  - generic [ref=e397]: Polecat
+                  - generic [ref=e398]: 8 available
+                - generic [ref=e402]: check_circle
+          - generic [ref=e403]:
+            - generic [ref=e404]:
+              - generic [ref=e405]: history
+              - heading "Recent Activity" [level=3] [ref=e406]
+            - generic [ref=e407]:
+              - generic [ref=e408]:
+                - generic [ref=e409] [cursor=pointer]:
+                  - generic [ref=e411]:
+                    - generic [ref=e412]: "🤝 HANDOFF: Witness patrol cycles 4-8 complete"
+                    - generic [ref=e413]: 3m ago
+                  - generic [ref=e414]: hooked
+                - generic [ref=e415] [cursor=pointer]:
+                  - generic [ref=e417]:
+                    - generic [ref=e418]: "🤝 HANDOFF: Witness patrol"
+                    - generic [ref=e419]: 34m ago
+                  - generic [ref=e420]: hooked
+                - generic [ref=e421] [cursor=pointer]:
+                  - generic [ref=e423]:
+                    - generic [ref=e424]: "🤝 HANDOFF: Witness cycle"
+                    - generic [ref=e425]: 47m ago
+                  - generic [ref=e426]: hooked
+                - generic [ref=e427] [cursor=pointer]:
+                  - generic [ref=e429]:
+                    - generic [ref=e430]: "[HIGH] Beads: Git configuration failed. Unable to fetch hooked bead hq-5p0. beads.role config failed with 'not in a git directory' — witness directory is not a git worktree."
+                    - generic [ref=e431]: 1h ago
+                  - generic [ref=e432]: open
+                - generic [ref=e433] [cursor=pointer]:
+                  - generic [ref=e435]:
+                    - generic [ref=e436]: "🤝 HANDOFF: Witness patrol idle"
+                    - generic [ref=e437]: 1h ago
+                  - generic [ref=e438]: hooked
+              - link "View all work arrow_forward" [ref=e439] [cursor=pointer]:
+                - /url: "#"
+                - text: View all work
+                - generic [ref=e440]: arrow_forward
+          - generic [ref=e441]:
+            - generic [ref=e442]:
+              - generic [ref=e443]: folder_special
+              - heading "Rigs" [level=3] [ref=e444]
+            - generic [ref=e445]:
+              - generic [ref=e446]:
+                - generic [ref=e447] [cursor=pointer]:
+                  - generic [ref=e449]: folder_special
+                  - generic [ref=e450]:
+                    - generic [ref=e451]: films_to_fly_to
+                    - text: 4 available
+                - generic [ref=e453] [cursor=pointer]:
+                  - generic [ref=e455]: folder_special
+                  - generic [ref=e456]:
+                    - generic [ref=e457]: footy_track
+                    - text: 3 available
+                - generic [ref=e459] [cursor=pointer]:
+                  - generic [ref=e461]: folder_special
+                  - generic [ref=e462]:
+                    - generic [ref=e463]: gastown_gui
+                    - text: 4 available
+                - generic [ref=e465] [cursor=pointer]:
+                  - generic [ref=e467]: folder_special
+                  - generic [ref=e468]:
+                    - generic [ref=e469]: igor
+                    - text: 5 available
+              - link "View all 5 rigs arrow_forward" [ref=e471] [cursor=pointer]:
+                - /url: "#"
+                - text: View all 5 rigs
+                - generic [ref=e472]: arrow_forward
+    - complementary [ref=e71]:
+      - generic [ref=e72]:
+        - heading "Activity" [level=2] [ref=e73]
+        - button "clear_all" [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: clear_all
+  - contentinfo [ref=e77]:
+    - generic [ref=e79]:
+      - generic [ref=e80]: anchor
+      - generic [ref=e81]: No work hooked
+    - generic [ref=e83]: Ready
+    - generic [ref=e85]:
+      - text: Press
+      - generic [ref=e86]: "?"
+      - text: for help

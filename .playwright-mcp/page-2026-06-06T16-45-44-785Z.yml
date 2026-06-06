@@ -1,0 +1,298 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img "Gas Town" [ref=e6]
+        - generic [ref=e7]: GAS TOWN
+      - generic [ref=e8]: footy
+      - generic [ref=e9]:
+        - generic [ref=e10]: assistant
+        - textbox "Tell Mayor what to build..." [ref=e11]
+        - button "send" [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: send
+        - button "visibility" [ref=e14] [cursor=pointer]:
+          - generic [ref=e15]: visibility
+    - generic [ref=e17]:
+      - button "dashboard Overview" [ref=e18] [cursor=pointer]:
+        - generic [ref=e19]: dashboard
+        - generic [ref=e20]: Overview
+      - button "local_shipping Convoys" [ref=e21] [cursor=pointer]:
+        - generic [ref=e22]: local_shipping
+        - generic [ref=e23]: Convoys
+      - button "task_alt Work" [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]: task_alt
+        - generic [ref=e26]: Work
+      - button "groups Agents" [ref=e27] [cursor=pointer]:
+        - generic [ref=e28]: groups
+        - generic [ref=e29]: Agents
+      - button "folder_special Rigs" [ref=e30] [cursor=pointer]:
+        - generic [ref=e31]: folder_special
+        - generic [ref=e32]: Rigs
+      - button "more_horiz More 1 expand_more" [ref=e2567] [cursor=pointer]:
+        - generic [ref=e35]: more_horiz
+        - generic [ref=e36]: More
+        - generic [ref=e93]: "1"
+        - generic [ref=e37]: expand_more
+    - generic [ref=e38]:
+      - button "help_outline" [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]: help_outline
+      - button "dark_mode" [ref=e41] [cursor=pointer]:
+        - generic [ref=e42]: dark_mode
+      - button "refresh" [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]: refresh
+      - generic [ref=e47]: Connected
+  - main [ref=e48]:
+    - complementary [ref=e49]:
+      - generic [ref=e50]:
+        - heading "Agents" [level=2] [ref=e51]
+        - button "chevron_left" [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]: chevron_left
+      - generic [ref=e54]:
+        - generic [ref=e1918]:
+          - heading "account_tree Agents" [level=3] [ref=e1919]:
+            - generic [ref=e1920]: account_tree
+            - text: Agents
+          - list [ref=e1921]:
+            - listitem [ref=e1922]:
+              - generic [ref=e1923] [cursor=pointer]:
+                - generic [ref=e1924]: account_balance
+                - generic [ref=e1925]: Mayor
+                - generic [ref=e1926]: "1"
+              - list [ref=e1927]:
+                - listitem [ref=e1928]:
+                  - generic [ref=e1929] [cursor=pointer]:
+                    - generic [ref=e1930]: schedule
+                    - generic [ref=e1931]: mayor
+            - listitem [ref=e1932]:
+              - generic [ref=e1933] [cursor=pointer]:
+                - generic [ref=e1934]: gavel
+                - generic [ref=e1935]: Deacon
+                - generic [ref=e1936]: "1"
+              - list [ref=e1937]:
+                - listitem [ref=e1938]:
+                  - generic [ref=e1939] [cursor=pointer]:
+                    - generic [ref=e1940]: play_circle
+                    - generic [ref=e1941]: deacon
+            - listitem [ref=e1942]:
+              - generic [ref=e1943] [cursor=pointer]:
+                - generic [ref=e1944]: smart_toy
+                - generic [ref=e1945]: Polecats
+                - generic [ref=e1946]: "8"
+              - list [ref=e1947]:
+                - listitem [ref=e1948]:
+                  - generic [ref=e1949] [cursor=pointer]:
+                    - generic [ref=e1950]: play_circle
+                    - generic [ref=e1951]: chrome
+                - listitem [ref=e1952]:
+                  - generic [ref=e1953] [cursor=pointer]:
+                    - generic [ref=e1954]: play_circle
+                    - generic [ref=e1955]: rust
+                - listitem [ref=e1956]:
+                  - generic [ref=e1957] [cursor=pointer]:
+                    - generic [ref=e1958]: play_circle
+                    - generic [ref=e1959]: obsidian
+                - listitem [ref=e1960]:
+                  - generic [ref=e1961] [cursor=pointer]:
+                    - generic [ref=e1962]: play_circle
+                    - generic [ref=e1963]: chrome
+                - listitem [ref=e1964]:
+                  - generic [ref=e1965] [cursor=pointer]:
+                    - generic [ref=e1966]: play_circle
+                    - generic [ref=e1967]: rust
+                - listitem [ref=e1968]:
+                  - generic [ref=e1969] [cursor=pointer]:
+                    - generic [ref=e1970]: play_circle
+                    - generic [ref=e1971]: furiosa
+                - listitem [ref=e1972]:
+                  - generic [ref=e1973] [cursor=pointer]:
+                    - generic [ref=e1974]: play_circle
+                    - generic [ref=e1975]: nux
+                - listitem [ref=e1976]:
+                  - generic [ref=e1977] [cursor=pointer]:
+                    - generic [ref=e1978]: play_circle
+                    - generic [ref=e1979]: slit
+            - listitem [ref=e1980]:
+              - generic [ref=e1981] [cursor=pointer]:
+                - generic [ref=e1982]: visibility
+                - generic [ref=e1983]: Witnesses
+                - generic [ref=e1984]: "5"
+              - list [ref=e1985]:
+                - listitem [ref=e1986]:
+                  - generic [ref=e1987] [cursor=pointer]:
+                    - generic [ref=e1988]: play_circle
+                    - generic [ref=e1989]: witness
+                - listitem [ref=e1990]:
+                  - generic [ref=e1991] [cursor=pointer]:
+                    - generic [ref=e1992]: play_circle
+                    - generic [ref=e1993]: witness
+                - listitem [ref=e1994]:
+                  - generic [ref=e1995] [cursor=pointer]:
+                    - generic [ref=e1996]: play_circle
+                    - generic [ref=e1997]: witness
+                - listitem [ref=e1998]:
+                  - generic [ref=e1999] [cursor=pointer]:
+                    - generic [ref=e2000]: play_circle
+                    - generic [ref=e2001]: witness
+                - listitem [ref=e2002]:
+                  - generic [ref=e2003] [cursor=pointer]:
+                    - generic [ref=e2004]: play_circle
+                    - generic [ref=e2005]: witness
+            - listitem [ref=e2006]:
+              - generic [ref=e2007] [cursor=pointer]:
+                - generic [ref=e2008]: precision_manufacturing
+                - generic [ref=e2009]: Refineries
+                - generic [ref=e2010]: "5"
+              - list [ref=e2011]:
+                - listitem [ref=e2012]:
+                  - generic [ref=e2013] [cursor=pointer]:
+                    - generic [ref=e2014]: play_circle
+                    - generic [ref=e2015]: refinery
+                - listitem [ref=e2016]:
+                  - generic [ref=e2017] [cursor=pointer]:
+                    - generic [ref=e2018]: play_circle
+                    - generic [ref=e2019]: refinery
+                - listitem [ref=e2020]:
+                  - generic [ref=e2021] [cursor=pointer]:
+                    - generic [ref=e2022]: play_circle
+                    - generic [ref=e2023]: refinery
+                - listitem [ref=e2024]:
+                  - generic [ref=e2025] [cursor=pointer]:
+                    - generic [ref=e2026]: play_circle
+                    - generic [ref=e2027]: refinery
+                - listitem [ref=e2028]:
+                  - generic [ref=e2029] [cursor=pointer]:
+                    - generic [ref=e2030]: play_circle
+                    - generic [ref=e2031]: refinery
+            - listitem [ref=e2032]:
+              - generic [ref=e2033] [cursor=pointer]:
+                - generic [ref=e2034]: settings
+                - generic [ref=e2035]: System
+                - generic [ref=e2036]: "1"
+              - list [ref=e2037]:
+                - listitem [ref=e2038]:
+                  - generic [ref=e2039] [cursor=pointer]:
+                    - generic [ref=e2040]: schedule
+                    - generic [ref=e2041]: georgeb
+        - generic [ref=e2042]:
+          - heading "settings_applications Services" [level=3] [ref=e2043]:
+            - generic [ref=e2044]: settings_applications
+            - text: Services
+          - generic [ref=e2045]:
+            - generic [ref=e2046]:
+              - generic [ref=e2047]:
+                - generic [ref=e2048]: account_balance
+                - generic [ref=e2049]: Mayor
+                - generic [ref=e2050]: Stopped
+              - button "play_arrow" [ref=e2052] [cursor=pointer]:
+                - generic [ref=e2053]: play_arrow
+            - generic [ref=e2054]:
+              - generic [ref=e2055]:
+                - generic [ref=e2056]: settings
+                - generic [ref=e2057]: Deacon
+                - generic [ref=e2058]: Running
+              - generic [ref=e2059]:
+                - button "stop" [ref=e2060] [cursor=pointer]:
+                  - generic [ref=e2061]: stop
+                - button "refresh" [ref=e2062] [cursor=pointer]:
+                  - generic [ref=e2063]: refresh
+            - generic [ref=e2064]:
+              - generic [ref=e2065]:
+                - generic [ref=e2066]: visibility
+                - generic [ref=e2067]: Witness
+                - generic [ref=e2068]: Running
+              - generic [ref=e2069]:
+                - button "stop" [ref=e2070] [cursor=pointer]:
+                  - generic [ref=e2071]: stop
+                - button "refresh" [ref=e2072] [cursor=pointer]:
+                  - generic [ref=e2073]: refresh
+            - generic [ref=e2074]:
+              - generic [ref=e2075]:
+                - generic [ref=e2076]: precision_manufacturing
+                - generic [ref=e2077]: Refinery
+                - generic [ref=e2078]: Running
+              - generic [ref=e2079]:
+                - button "stop" [ref=e2080] [cursor=pointer]:
+                  - generic [ref=e2081]: stop
+                - button "refresh" [ref=e2082] [cursor=pointer]:
+                  - generic [ref=e2083]: refresh
+        - generic [ref=e2084]:
+          - heading "insights Stats" [level=3] [ref=e2085]:
+            - generic [ref=e2086]: insights
+            - text: Stats
+          - generic [ref=e2087]:
+            - generic [ref=e2088]:
+              - generic [ref=e2089]: folder_special
+              - generic [ref=e2090]:
+                - generic [ref=e2091]: "5"
+                - generic [ref=e2092]: Rigs
+            - generic [ref=e2093]:
+              - generic [ref=e2094]: person
+              - generic [ref=e2095]:
+                - generic [ref=e2096]: "19"
+                - generic [ref=e2097]: Running
+            - generic [ref=e2098]:
+              - generic [ref=e2099]: pending
+              - generic [ref=e2100]:
+                - generic [ref=e2101]: "0"
+                - generic [ref=e2102]: Working
+    - generic [ref=e491]:
+      - generic [ref=e492]:
+        - heading "My Inbox" [level=1] [ref=e2568]
+        - generic [ref=e494]:
+          - generic [ref=e495]:
+            - button "inbox My Inbox" [ref=e496] [cursor=pointer]:
+              - generic [ref=e497]: inbox
+              - text: My Inbox
+            - button "forum All Mail" [ref=e498] [cursor=pointer]:
+              - generic [ref=e499]: forum
+              - text: All Mail
+          - button "edit Compose" [ref=e500] [cursor=pointer]:
+            - generic [ref=e501]: edit
+            - text: Compose
+      - generic [ref=e2569] [cursor=pointer]:
+        - generic [ref=e2571]: settings
+        - generic [ref=e2572]:
+          - generic [ref=e2573]:
+            - generic [ref=e2575]:
+              - generic [ref=e2576]: settings
+              - text: overseer
+            - generic [ref=e2577]: Sat
+          - generic [ref=e2579]: "Convoy complete: Test convoy hq-cv-test"
+        - generic [ref=e2580]:
+          - button "mark_email_read" [ref=e2581]:
+            - generic [ref=e2582]: mark_email_read
+          - button "archive" [ref=e2583]:
+            - generic [ref=e2584]: archive
+          - button "delete" [ref=e2585]:
+            - generic [ref=e2586]: delete
+    - complementary [ref=e71]:
+      - generic [ref=e72]:
+        - heading "Activity" [level=2] [ref=e73]
+        - button "clear_all" [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: clear_all
+  - contentinfo [ref=e77]:
+    - generic [ref=e79]:
+      - generic [ref=e80]: anchor
+      - generic [ref=e81]: No work hooked
+    - generic [ref=e83]: Ready
+    - generic [ref=e85]:
+      - text: Press
+      - generic [ref=e86]: "?"
+      - text: for help
+  - generic [ref=e2587]:
+    - generic [ref=e2588]:
+      - 'heading "Convoy complete: Test convoy hq-cv-test" [level=2] [ref=e2589]'
+      - button "close" [ref=e2590] [cursor=pointer]:
+        - generic [ref=e2591]: close
+    - generic [ref=e2592]:
+      - generic [ref=e2593]:
+        - generic [ref=e2594]:
+          - strong [ref=e2595]: "From:"
+          - text: overseer
+        - generic [ref=e2596]:
+          - strong [ref=e2597]: "Date:"
+          - text: 06/06/2026, 23:00:00
+      - generic [ref=e2598]: (No content)
+    - button "reply Reply" [ref=e2600] [cursor=pointer]:
+      - generic [ref=e2601]: reply
+      - text: Reply

@@ -1,0 +1,72 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img "Gas Town" [ref=e6]
+        - generic [ref=e7]: GAS TOWN
+      - generic [ref=e8]: Loading...
+      - generic [ref=e9]:
+        - generic [ref=e10]: assistant
+        - textbox "Tell Mayor what to build..." [ref=e11]
+        - button "send" [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: send
+        - button "visibility" [ref=e14] [cursor=pointer]:
+          - generic [ref=e15]: visibility
+    - generic [ref=e17]:
+      - button "dashboard Overview" [ref=e18] [cursor=pointer]:
+        - generic [ref=e19]: dashboard
+        - generic [ref=e20]: Overview
+      - button "local_shipping Convoys" [ref=e21] [cursor=pointer]:
+        - generic [ref=e22]: local_shipping
+        - generic [ref=e23]: Convoys
+      - button "task_alt Work" [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]: task_alt
+        - generic [ref=e26]: Work
+      - button "groups Agents" [ref=e27] [cursor=pointer]:
+        - generic [ref=e28]: groups
+        - generic [ref=e29]: Agents
+      - button "folder_special Rigs" [ref=e30] [cursor=pointer]:
+        - generic [ref=e31]: folder_special
+        - generic [ref=e32]: Rigs
+      - button "more_horiz More expand_more" [ref=e34] [cursor=pointer]:
+        - generic [ref=e35]: more_horiz
+        - generic [ref=e36]: More
+        - generic [ref=e37]: expand_more
+    - generic [ref=e38]:
+      - button "help_outline" [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]: help_outline
+      - button "dark_mode" [ref=e41] [cursor=pointer]:
+        - generic [ref=e42]: dark_mode
+      - button "refresh" [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]: refresh
+      - generic [ref=e47]: Connected
+  - main [ref=e48]:
+    - complementary [ref=e49]:
+      - generic [ref=e50]:
+        - heading "Agents" [level=2] [ref=e51]
+        - button "chevron_left" [ref=e52] [cursor=pointer]:
+          - generic [ref=e53]: chevron_left
+    - generic [ref=e57]:
+      - heading "System Overview" [level=1] [ref=e58]
+      - button "refresh Refresh" [ref=e60] [cursor=pointer]:
+        - generic [ref=e61]: refresh
+        - text: Refresh
+    - complementary [ref=e71]:
+      - generic [ref=e72]:
+        - heading "Activity" [level=2] [ref=e73]
+        - button "clear_all" [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: clear_all
+  - contentinfo [ref=e77]:
+    - generic [ref=e79]:
+      - generic [ref=e80]: anchor
+      - generic [ref=e81]: No work hooked
+    - generic [ref=e83]: Loading...
+    - generic [ref=e85]:
+      - text: Press
+      - generic [ref=e86]: "?"
+      - text: for help
+  - generic [ref=e87]:
+    - generic [ref=e88]: check_circle
+    - generic [ref=e89]: Connected to Gas Town
+    - button "Close" [ref=e90] [cursor=pointer]:
+      - generic [ref=e91]: close
