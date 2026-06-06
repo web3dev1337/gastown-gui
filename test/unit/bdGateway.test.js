@@ -164,4 +164,41 @@ describe('BDGateway', () => {
     await gateway.reassign({ beadId: 'bd-4', target: 'mayor' });
     expect(runner.calls[0].args).toEqual(['update', 'bd-4', '--assignee', 'mayor']);
   });
+
+  it('listForDir() overrides BEADS_DIR env', async () => {
+    const runner = new FakeRunner();
+    runner.queue(okResult('bd v0.44.0'));
+    runner.queue(okResult('[{"id":"ig-1"}]'));
+    const gateway = new BDGateway({ runner, gtRoot: '/tmp/gt' });
+
+    const result = await gateway.listForDir('/tmp/gt/igor/.beads', { status: 'open' });
+    expect(result.data).toEqual([{ id: 'ig-1' }]);
+    const listCall = runner.calls[1];
+    expect(listCall.options.env.BEADS_DIR).toBe('/tmp/gt/igor/.beads');
+  });
+
+  it('listAcrossRigs() merges beads from hq + all rigs and annotates _rig', async () => {
+    const runner = new FakeRunner();
+    // All three listForDir calls run in parallel; each triggers _supportsNoDaemonFlag().
+    // The first call probes; the rest see cached result. But Promise.all launches all
+    // concurrently before any resolves, so three probe calls are queued then three list calls.
+    runner.queue(okResult('bd v0.44.0')); // probe from hq
+    runner.queue(okResult('bd v0.44.0')); // probe from gastown_gui (cache miss — still pending)
+    runner.queue(okResult('bd v0.44.0')); // probe from igor
+    runner.queue(okResult('[{"id":"hq-1","title":"hq bead"}]'));
+    runner.queue(okResult('[{"id":"gg-1","title":"gui bead"}]'));
+    runner.queue(okResult('[{"id":"ig-1","title":"igor bead"}]'));
+
+    const gateway = new BDGateway({ runner, gtRoot: '/tmp/gt' });
+    const result = await gateway.listAcrossRigs({ rigNames: ['gastown_gui', 'igor'] });
+
+    const ids = result.map((b) => b.id);
+    expect(ids).toContain('hq-1');
+    expect(ids).toContain('gg-1');
+    expect(ids).toContain('ig-1');
+
+    expect(result.find((b) => b.id === 'hq-1')._rig).toBe('hq');
+    expect(result.find((b) => b.id === 'gg-1')._rig).toBe('gastown_gui');
+    expect(result.find((b) => b.id === 'ig-1')._rig).toBe('igor');
+  });
 });

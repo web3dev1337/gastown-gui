@@ -13,7 +13,7 @@ function normalizeLabels(labels) {
 }
 
 export class BeadService {
-  constructor({ bdGateway, emit } = {}) {
+  constructor({ bdGateway, gtGateway, emit } = {}) {
     if (!bdGateway) throw new Error('BeadService requires bdGateway');
     if (!bdGateway.list) throw new Error('BeadService requires bdGateway.list()');
     if (!bdGateway.search) throw new Error('BeadService requires bdGateway.search()');
@@ -21,13 +21,30 @@ export class BeadService {
     if (!bdGateway.create) throw new Error('BeadService requires bdGateway.create()');
 
     this._bd = bdGateway;
+    this._gt = gtGateway ?? null;
     this._emit = emit ?? null;
   }
 
+  async _getRigNames() {
+    if (!this._gt?.exec) return [];
+    try {
+      const result = await this._gt.exec(['rig', 'list', '--json'], { timeoutMs: 10000 });
+      const parsed = JSON.parse((result.stdout || '').trim());
+      if (Array.isArray(parsed)) return parsed.map((r) => r.name).filter(Boolean);
+    } catch {
+      // ignore — fall back to single-rig mode
+    }
+    return [];
+  }
+
   async list({ status } = {}) {
-    const result = await this._bd.list({ status });
-    if (!result.ok || !Array.isArray(result.data)) return [];
-    return result.data;
+    const rigNames = await this._getRigNames();
+    if (rigNames.length === 0) {
+      const result = await this._bd.list({ status });
+      if (!result.ok || !Array.isArray(result.data)) return [];
+      return result.data;
+    }
+    return this._bd.listAcrossRigs({ rigNames, status });
   }
 
   async search(query) {

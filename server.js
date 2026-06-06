@@ -91,6 +91,7 @@ const statusService = new StatusService({ gtGateway, tmuxGateway, cache: backend
 const targetService = new TargetService({ statusService });
 const beadService = new BeadService({
   bdGateway,
+  gtGateway,
   emit: (type, data) => emitMutationEvent(type, data),
 });
 const workService = new WorkService({

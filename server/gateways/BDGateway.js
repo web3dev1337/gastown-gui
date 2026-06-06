@@ -62,6 +62,37 @@ export class BDGateway {
     return { ...result, raw, data: parseJsonOrNull(raw) };
   }
 
+  async listForDir(beadsDir, { status } = {}) {
+    const args = ['list'];
+    if (status) args.push(`--status=${status}`);
+    args.push('--json');
+
+    const result = await this._execCompat(args, { timeoutMs: 30000, env: { BEADS_DIR: beadsDir } });
+    const raw = (result.stdout || '').trim();
+    return { ...result, raw, data: parseJsonOrNull(raw) };
+  }
+
+  async listAcrossRigs({ rigNames = [], status } = {}) {
+    const sources = [
+      { rig: 'hq', beadsDir: path.join(this._gtRoot, '.beads') },
+      ...rigNames.map((name) => ({ rig: name, beadsDir: path.join(this._gtRoot, name, '.beads') })),
+    ];
+
+    const results = await Promise.all(
+      sources.map(async ({ rig, beadsDir }) => {
+        try {
+          const result = await this.listForDir(beadsDir, { status });
+          if (!Array.isArray(result.data)) return [];
+          return result.data.map((bead) => ({ ...bead, _rig: rig }));
+        } catch {
+          return [];
+        }
+      })
+    );
+
+    return results.flat();
+  }
+
   async search(query) {
     const args = [query ? 'search' : 'list'];
     if (query) args.push(query);
