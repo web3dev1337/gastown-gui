@@ -499,16 +499,29 @@ function formatAgent(name) {
 /**
  * Show mail detail modal
  */
-function showMailDetail(mailId, mail) {
+async function showMailDetail(mailId, mail) {
   if (!mail) return;
 
   // Mark as read
   const event = new CustomEvent(MAIL_READ, { detail: { mailId } });
   document.dispatchEvent(event);
 
+  // If body is missing and this is a real bead (not a synthetic feed event), fetch the full message
+  let fullMail = mail;
+  if (!mail.body && !mail.message && !mail.feedEvent) {
+    try {
+      const fetched = await api.get(`/api/mail/${encodeURIComponent(mailId)}`);
+      if (fetched && (fetched.body || fetched.message)) {
+        fullMail = { ...mail, ...fetched };
+      }
+    } catch {
+      // fall through with original mail data
+    }
+  }
+
   // Show modal
   const modalEvent = new CustomEvent(MAIL_DETAIL, {
-    detail: { mailId, mail }
+    detail: { mailId, mail: fullMail }
   });
   document.dispatchEvent(modalEvent);
 }
