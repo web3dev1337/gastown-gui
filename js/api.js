@@ -93,6 +93,11 @@ export const api = {
     return this.get('/api/hook');
   },
 
+  // === Model policy ===
+  getModelPolicy() {
+    return this.get('/api/model-policy');
+  },
+
   // === Mail ===
   getMail(refresh = false) {
     const query = refresh ? '?refresh=true' : '';

@@ -19,6 +19,7 @@ import { initPRList, loadPRs } from './components/pr-list.js';
 import { initFormulaList, loadFormulas } from './components/formula-list.js';
 import { initIssueList, loadIssues } from './components/issue-list.js';
 import { initHealthCheck, loadHealthCheck } from './components/health-check.js';
+import { initModelBadge } from './components/model-badge.js';
 import { initDashboard, loadDashboard } from './components/dashboard.js';
 import { showToast } from './components/toast.js';
 import { initModals } from './components/modals.js';
@@ -115,6 +116,9 @@ async function init() {
 
   // Set up Health check
   initHealthCheck();
+
+  // Show which model gt will launch agents with
+  initModelBadge();
 
   // Set up Dashboard
   initDashboard();
