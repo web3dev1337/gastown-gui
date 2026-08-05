@@ -1,0 +1,59 @@
+; systemd *user* unit template for gastown-gui.
+;
+; A user unit, not a system unit: the server shells out to `gt`/`bd`, which drive the
+; caller's tmux server and Dolt instance and own the files under GT_ROOT. Running it as
+; anything but the human who owns the town breaks all three.
+;
+; Install:
+;   mkdir -p ~/.config/systemd/user
+;   cp deploy/gastown-gui.service ~/.config/systemd/user/
+;   $EDITOR ~/.config/systemd/user/gastown-gui.service     # set the Environment= lines
+;   loginctl enable-linger "$USER"                         # survive logout / reboot
+;   systemctl --user daemon-reload
+;   systemctl --user enable --now gastown-gui
+;
+; Logs: journalctl --user -u gastown-gui -f
+
+[Unit]
+Description=Gas Town GUI
+Documentation=https://github.com/web3dev1337/gastown-gui
+After=network-online.target
+; The bind address may not exist yet at boot (e.g. a docker bridge gateway); keep
+; retrying rather than giving up after the default burst.
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=%h/gastown-gui
+ExecStart=/usr/bin/node %h/gastown-gui/server.js
+
+; --- Configuration -----------------------------------------------------------
+; PATH must contain the gt/bd binaries and anything they exec (e.g. dolt).
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=GT_ROOT=%h/gt
+Environment=GASTOWN_PORT=7667
+
+; HOST: bind address. The GUI has no authentication of its own and exposes endpoints
+; that start and stop agents, so do not bind 0.0.0.0 on a shared network. Bind loopback
+; and reach it through an authenticating reverse proxy, or bind an interface only that
+; proxy can route to. See deploy/README.md.
+Environment=HOST=127.0.0.1
+
+; Browser origins allowed to call the API. Set this to the proxied URL.
+;Environment=CORS_ORIGINS=https://gastown.example.com
+; -----------------------------------------------------------------------------
+
+Restart=on-failure
+RestartSec=5
+
+StandardOutput=journal
+StandardError=journal
+
+; Hardening is deliberately minimal. The process must exec CLIs, write into GT_ROOT,
+; and talk to the user's tmux socket, so the usual ProtectHome/PrivateTmp lockdown does
+; not apply. The Protect*/Restrict* family needs privileges a --user manager does not
+; have and fails the unit with status=218/CAPABILITIES — do not add them here.
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target
