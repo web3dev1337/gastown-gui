@@ -197,6 +197,9 @@ bin/cli.js - CLI entry point (gastown-gui command)
 scripts/extract_user_prompts.mjs - Sanitized prompt log builder
 flake.nix - Flake outputs for package/app + NixOS module export
 nix/deployment.nix - NixOS module defining services.gastown-gui
+deploy/gastown-gui.service - systemd user unit template (non-NixOS hosts)
+deploy/README.md - Deployment guide: why a user unit, safe bind addresses,
+                   reverse-proxy + SSO requirements (WebSocket upgrade is mandatory)
 ```
 
 ## Documentation
