@@ -253,8 +253,8 @@ describe('POST /api/sling', () => {
       body: JSON.stringify({
         bead: 'test-bead-123',
         target: 'zoo-game/Polecat-1',
-        molecule: 'test-molecule',
-        quality: 'normal',
+        formula: 'mol-review',
+        args: 'focus on tests',
       }),
     });
 

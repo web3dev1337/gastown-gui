@@ -514,16 +514,15 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="sling-quality">Quality</label>
-            <select id="sling-quality" name="quality">
-              <option value="shiny">Shiny (default)</option>
-              <option value="basic">Basic</option>
-              <option value="chrome">Chrome</option>
+            <label for="sling-formula">Formula (optional)</label>
+            <select id="sling-formula" name="formula">
+              <option value="">Default (gt picks the formula)</option>
+              <!-- Populated dynamically -->
             </select>
           </div>
           <div class="form-group">
             <label for="sling-args">Instructions (optional)</label>
-            <textarea id="sling-args" name="molecule" placeholder="Additional instructions for the worker" rows="3"></textarea>
+            <textarea id="sling-args" name="args" placeholder="Additional instructions for the worker" rows="3"></textarea>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-modal-close>Cancel</button>

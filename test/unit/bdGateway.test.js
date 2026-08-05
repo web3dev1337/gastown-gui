@@ -121,9 +121,9 @@ describe('BDGateway', () => {
       'Steps to repro…',
       '--priority',
       'P1',
-      '--label',
+      '--labels',
       'bug',
-      '--label',
+      '--labels',
       'ui',
     ]);
     expect(result.beadId).toBe('gt-abc123');

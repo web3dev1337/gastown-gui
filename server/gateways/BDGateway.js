@@ -78,7 +78,8 @@ export class BDGateway {
     if (priority) args.push('--priority', priority);
     if (Array.isArray(labels)) {
       labels.forEach((label) => {
-        args.push('--label', label);
+        // `--labels` is the documented flag; `--label` is an undocumented alias.
+        args.push('--labels', label);
       });
     }
 

@@ -83,8 +83,7 @@ export const api = {
     return this.post('/api/sling', {
       bead,
       target,
-      molecule: options.molecule,
-      quality: options.quality,
+      formula: options.formula,
       args: options.args,
     });
   },

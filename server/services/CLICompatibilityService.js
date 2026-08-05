@@ -60,11 +60,11 @@ export function createCLICompatibilityService({ executeGT, executeBD, killTmuxSe
         ],
       },
       {
+        // Last resort: `gt sling` has no --rig flag, and its --agent flag selects a
+        // runtime (claude/gemini/codex), not a polecat — so there is no sling-based
+        // fallback for waking a named polecat.
         args: ['polecat', 'wake', address],
         retryOn: GT_UNKNOWN_POLECAT_WAKE_PATTERNS,
-      },
-      {
-        args: ['sling', '--rig', rig, '--agent', name],
       },
     ], { timeout: timeoutMs });
   }
@@ -107,8 +107,8 @@ export function createCLICompatibilityService({ executeGT, executeBD, killTmuxSe
           title,
           '--type', 'agent',
           '--description', `Auto-created ${role} agent bead for rig ${rigName}`,
-          '--label', `agent-role:${role}`,
-          '--label', `agent-rig:${rigName}`,
+          '--labels', `agent-role:${role}`,
+          '--labels', `agent-rig:${rigName}`,
           '--silent',
         ],
       },

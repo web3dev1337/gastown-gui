@@ -82,7 +82,7 @@ describe('GTGateway', () => {
     expect(result.convoyId).toBe('convoy-abc123');
   });
 
-  it('sling() builds args for target/molecule/quality/args', async () => {
+  it('sling() builds args for target/formula/args', async () => {
     const runner = new FakeRunner();
     runner.queue({ ok: true, exitCode: 0, stdout: 'ok', stderr: 'warn', error: null, signal: null });
     const gateway = new GTGateway({ runner, gtRoot: '/tmp/gt' });
@@ -90,13 +90,32 @@ describe('GTGateway', () => {
     const result = await gateway.sling({
       bead: 'bd-1',
       target: 'mayor',
-      molecule: 'foo',
-      quality: 'high',
-      args: '--bar',
+      formula: 'mol-review',
+      args: 'focus on security',
     });
 
-    expect(runner.calls[0].args).toEqual(['sling', 'bd-1', 'mayor', '--molecule', 'foo', '--quality=high', '--args', '--bar']);
+    expect(runner.calls[0].args).toEqual(['sling', 'bd-1', 'mayor', '--formula', 'mol-review', '--args', 'focus on security']);
     expect(result.raw).toBe('okwarn');
+  });
+
+  it('sling() omits optional flags when not provided', async () => {
+    const runner = new FakeRunner();
+    runner.queue({ ok: true, exitCode: 0, stdout: 'ok', stderr: '', error: null, signal: null });
+    const gateway = new GTGateway({ runner, gtRoot: '/tmp/gt' });
+
+    await gateway.sling({ bead: 'bd-1', target: 'mayor' });
+
+    expect(runner.calls[0].args).toEqual(['sling', 'bd-1', 'mayor']);
+  });
+
+  it('sling() maps the legacy molecule/quality aliases onto --args/--formula', async () => {
+    const runner = new FakeRunner();
+    runner.queue({ ok: true, exitCode: 0, stdout: 'ok', stderr: '', error: null, signal: null });
+    const gateway = new GTGateway({ runner, gtRoot: '/tmp/gt' });
+
+    await gateway.sling({ bead: 'bd-1', target: 'mayor', molecule: 'do the thing', quality: 'mol-review' });
+
+    expect(runner.calls[0].args).toEqual(['sling', 'bd-1', 'mayor', '--formula', 'mol-review', '--args', 'do the thing']);
   });
 
   it('escalate() builds args and returns raw output', async () => {

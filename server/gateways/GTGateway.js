@@ -55,12 +55,18 @@ export class GTGateway {
     return { ...result, raw, convoyId };
   }
 
-  async sling({ bead, target, molecule, quality, args: slingArgs } = {}) {
+  // `molecule` and `quality` are legacy aliases kept for one release: the GUI used to
+  // send them as `--molecule` / `--quality`, neither of which exists in `gt sling`.
+  // `molecule` carried free-text instructions (-> --args) and `quality` named a formula
+  // (-> --formula).
+  async sling({ bead, target, formula, molecule, quality, args: slingArgs } = {}) {
+    const effectiveFormula = formula || quality;
+    const effectiveArgs = slingArgs || molecule;
+
     const cmdArgs = ['sling', bead];
     if (target) cmdArgs.push(target);
-    if (molecule) cmdArgs.push('--molecule', molecule);
-    if (quality) cmdArgs.push(`--quality=${quality}`);
-    if (slingArgs) cmdArgs.push('--args', slingArgs);
+    if (effectiveFormula) cmdArgs.push('--formula', effectiveFormula);
+    if (effectiveArgs) cmdArgs.push('--args', effectiveArgs);
 
     const result = await this.exec(cmdArgs, { timeoutMs: 90000 });
     const raw = `${result.stdout || ''}${result.stderr || ''}`.trim();

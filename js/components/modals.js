@@ -490,6 +490,32 @@ function initSlingModal(element, data) {
 
   // Populate target dropdown with agents
   populateTargetDropdown(element);
+
+  // Populate the optional formula dropdown
+  populateFormulaDropdown(element);
+}
+
+async function populateFormulaDropdown(modalElement) {
+  const formulaSelect = modalElement.querySelector('[name="formula"]');
+  if (!formulaSelect) return;
+
+  const defaultOption = '<option value="">Default (gt picks the formula)</option>';
+  formulaSelect.innerHTML = defaultOption;
+
+  try {
+    const formulas = await api.getFormulas();
+    for (const formula of formulas || []) {
+      const name = formula.name || formula.id;
+      if (!name) continue;
+      const option = document.createElement('option');
+      option.value = name;
+      option.textContent = formula.description ? `${name} — ${formula.description}` : name;
+      formulaSelect.appendChild(option);
+    }
+  } catch (err) {
+    console.error('[Modals] Failed to populate formulas:', err);
+    // Leave the default-only dropdown in place; slinging without --formula still works.
+  }
 }
 
 async function populateTargetDropdown(modalElement) {
@@ -580,8 +606,8 @@ async function populateTargetDropdown(modalElement) {
 async function handleSlingSubmit(form) {
   const bead = form.querySelector('[name="bead"]')?.value;
   const target = form.querySelector('[name="target"]')?.value;
-  const molecule = form.querySelector('[name="molecule"]')?.value || undefined;
-  const quality = form.querySelector('[name="quality"]')?.value || undefined;
+  const args = form.querySelector('[name="args"]')?.value || undefined;
+  const formula = form.querySelector('[name="formula"]')?.value || undefined;
 
   if (!bead || !target) {
     showToast('Please enter both bead and target', 'warning');
@@ -593,7 +619,7 @@ async function handleSlingSubmit(form) {
   closeAllModals();
 
   // Run in background (non-blocking)
-  api.sling(bead, target, { molecule, quality }).then(result => {
+  api.sling(bead, target, { formula, args }).then(result => {
     showToast(`Work slung: ${bead} → ${target}`, 'success');
     // Dispatch event
     document.dispatchEvent(new CustomEvent(WORK_SLUNG, { detail: result }));

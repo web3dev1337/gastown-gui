@@ -169,7 +169,7 @@ test/integration/websocket.test.js - WebSocket lifecycle tests
 test/integration/cache.test.js - Cache invalidation tests
 test/integration/realtime-cache-invalidation.test.js - Real server cache invalidation coverage for rig/service mutation freshness
 
-test/unit/ - 33 unit test files covering:
+test/unit/ - 34 unit test files covering:
 ├─ Domain values: safeSegment, agentPath
 ├─ Rig agent normalization: normalizeRigAgents
 ├─ Session naming: sessionNames
@@ -178,6 +178,8 @@ test/unit/ - 33 unit test files covering:
 ├─ Services: statusService, targetService, githubService, convoyService,
 │            formulaService, beadService, workService
 ├─ CLI resolution: executableResolver
+├─ CLI conformance: cliConformance (asserts every gt/bd flag the GUI emits
+│                   exists in the installed CLI's --help; skips if not installed)
 ├─ Routes: statusRoutes, targetRoutes, githubRoutes, convoyRoutes,
 │          formulaRoutes, beadRoutes, workRoutes
 ├─ Frontend: state, htmlUtils, quoteArg, formattingTime, animationsShared,
