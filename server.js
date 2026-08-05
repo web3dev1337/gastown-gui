@@ -49,11 +49,13 @@ import { GitHubService } from './server/services/GitHubService.js';
 import { StatusService } from './server/services/StatusService.js';
 import { TargetService } from './server/services/TargetService.js';
 import { WorkService } from './server/services/WorkService.js';
+import { ModelPolicyService } from './server/services/ModelPolicyService.js';
 import { createCLICompatibilityService } from './server/services/CLICompatibilityService.js';
 import { registerBeadRoutes } from './server/routes/beads.js';
 import { registerConvoyRoutes } from './server/routes/convoys.js';
 import { registerFormulaRoutes } from './server/routes/formulas.js';
 import { registerGitHubRoutes } from './server/routes/github.js';
+import { registerModelPolicyRoutes } from './server/routes/modelPolicy.js';
 import { registerStatusRoutes } from './server/routes/status.js';
 import { registerTargetRoutes } from './server/routes/targets.js';
 import { registerWorkRoutes } from './server/routes/work.js';
@@ -88,6 +90,13 @@ const convoyService = new ConvoyService({
   emit: (type, data) => emitMutationEvent(type, data),
 });
 const statusService = new StatusService({ gtGateway, tmuxGateway, cache: backendCache, gtRoot: GT_ROOT });
+const modelPolicyService = new ModelPolicyService({
+  gtRoot: GT_ROOT,
+  cache: backendCache,
+  // Optional: the model you expect every work role to resolve to, e.g. "sonnet".
+  // When set, a mismatch is warned about at startup and flagged in the UI.
+  expectedModel: process.env.GASTOWN_EXPECTED_MODEL || null,
+});
 const targetService = new TargetService({ statusService });
 const beadService = new BeadService({
   bdGateway,
@@ -616,6 +625,9 @@ async function loadMailFeedEvents(feedPath) {
 
 // Town status overview
 registerStatusRoutes(app, { statusService });
+
+// Which agent runtime (and therefore which model) each role resolves to
+registerModelPolicyRoutes(app, { modelPolicyService });
 
 // List convoys
 registerConvoyRoutes(app, { convoyService });
@@ -1901,6 +1913,15 @@ server.listen(PORT, HOST, () => {
 ║  WebSocket:  ws://${displayHost}:${PORT}/ws                      ║
 ╚══════════════════════════════════════════════════════════╝
   `);
+
+  // Report which model gt will launch agents with. The GUI cannot set it, so the
+  // only way drift becomes visible is if something says so out loud.
+  modelPolicyService.describeForStartup()
+    .then(({ level, message }) => {
+      if (level === 'warn') console.warn(`[ModelPolicy] ${message}`);
+      else console.log(`[ModelPolicy] ${message}`);
+    })
+    .catch((err) => console.warn(`[ModelPolicy] could not resolve: ${err.message}`));
 });
 
 // Graceful shutdown

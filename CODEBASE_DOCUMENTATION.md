@@ -80,18 +80,20 @@ server/services/WorkService.js - Work lifecycle (close, defer, reassign)
 server/services/GitHubService.js - PR/issue/repo queries via GitHubGateway
 server/services/TargetService.js - Available sling targets
 server/services/CLICompatibilityService.js - Old/new gt & bd command fallback orchestration for server endpoints
+server/services/ModelPolicyService.js - Resolves which agent runtime/model gt launches per role (reads town + rig settings)
 ```
 
 ## Backend — Routes
 
 ```
-server/routes/status.js - GET /api/status, /api/health
+server/routes/status.js - GET /api/status  (note: /api/health is inline in server.js)
 server/routes/convoys.js - GET/POST /api/convoys, /api/convoy/:id
 server/routes/formulas.js - CRUD /api/formulas, /api/formula/:name
 server/routes/beads.js - CRUD /api/beads, /api/bead/:id
 server/routes/work.js - POST /api/work/:id/{done,park,release,reassign}
 server/routes/github.js - GET /api/github/{prs,issues,repos}
 server/routes/targets.js - GET /api/targets
+server/routes/modelPolicy.js - GET /api/model-policy
 ```
 
 ## Frontend — Core
@@ -123,6 +125,7 @@ js/components/onboarding.js - First-run setup wizard
 js/components/tutorial.js - Interactive tutorial overlay
 js/components/autocomplete.js - Search input with suggestions
 js/components/toast.js - Toast notification system
+js/components/model-badge.js - Header badge showing the model gt launches agents with
 ```
 
 ## Frontend — Shared & Utils
@@ -169,7 +172,7 @@ test/integration/websocket.test.js - WebSocket lifecycle tests
 test/integration/cache.test.js - Cache invalidation tests
 test/integration/realtime-cache-invalidation.test.js - Real server cache invalidation coverage for rig/service mutation freshness
 
-test/unit/ - 33 unit test files covering:
+test/unit/ - 34 unit test files covering:
 ├─ Domain values: safeSegment, agentPath
 ├─ Rig agent normalization: normalizeRigAgents
 ├─ Session naming: sessionNames
@@ -178,6 +181,7 @@ test/unit/ - 33 unit test files covering:
 ├─ Services: statusService, targetService, githubService, convoyService,
 │            formulaService, beadService, workService
 ├─ CLI resolution: executableResolver
+├─ Model policy: modelPolicyService
 ├─ Routes: statusRoutes, targetRoutes, githubRoutes, convoyRoutes,
 │          formulaRoutes, beadRoutes, workRoutes
 ├─ Frontend: state, htmlUtils, quoteArg, formattingTime, animationsShared,

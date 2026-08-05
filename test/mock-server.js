@@ -97,6 +97,22 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
+app.get('/api/model-policy', (req, res) => {
+  const role = { agent: 'claude', model: 'sonnet[1m]', source: 'town default_agent' };
+  res.json({
+    model: 'sonnet[1m]',
+    matchesExpected: true,
+    expectedModel: 'sonnet',
+    unresolved: false,
+    settingsPath: '/home/mock/gt/settings/config.json',
+    roles: {
+      mayor: role, deacon: role, witness: role, refinery: role, polecat: role, crew: role,
+    },
+    rigOverrides: {},
+    dogNote: 'gastown pins the dog role to Haiku and ignores Claude-preset overrides for it.',
+  });
+});
+
 app.get('/api/convoys', (req, res) => {
   res.json(mockData.convoys);
 });
