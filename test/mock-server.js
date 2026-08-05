@@ -134,13 +134,14 @@ app.post('/api/convoy', (req, res) => {
 });
 
 app.post('/api/sling', (req, res) => {
-  const { bead, target, molecule, quality } = req.body;
+  const { bead, target, formula, molecule, quality, args } = req.body;
   const result = {
     id: `sling-${Date.now()}`,
     bead,
     target,
-    molecule,
-    quality,
+    // Legacy aliases still accepted: molecule -> args, quality -> formula.
+    formula: formula || quality,
+    args: args || molecule,
     status: 'dispatched',
     timestamp: new Date().toISOString(),
   };

@@ -75,8 +75,8 @@ export class WorkService {
     this._emit = emit ?? null;
   }
 
-  async sling({ bead, target, molecule, quality, args } = {}) {
-    const result = await this._gt.sling({ bead, target, molecule, quality, args });
+  async sling({ bead, target, formula, molecule, quality, args } = {}) {
+    const result = await this._gt.sling({ bead, target, formula, molecule, quality, args });
     const { raw, workAttached, promptSent, polecatSpawned } = analyzeSlingOutput(result.raw);
 
     const ok = Boolean(result.ok || workAttached || promptSent);
