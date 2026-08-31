@@ -97,7 +97,7 @@ server/routes/targets.js - GET /api/targets
 ## Frontend — Core
 
 ```
-js/app.js - App init, tab routing, event wiring, status polling
+js/app.js - App initialization helpers, tab routing, event wiring, status polling
 js/api.js - HTTP client for /api/* + WebSocket client class
 js/state.js - Global reactive state store, component subscriptions
 ```
