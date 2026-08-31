@@ -85,14 +85,20 @@ jobs:
           server_log=$(mktemp)
           node server.js >"$server_log" 2>&1 &
           server_pid=$!
-          trap 'kill "$server_pid" 2>/dev/null; wait "$server_pid" 2>/dev/null' EXIT
+          cleanup() {
+            status=$?
+            kill "$server_pid" 2>/dev/null || true
+            wait "$server_pid" 2>/dev/null || true
+            return "$status"
+          }
+          trap cleanup EXIT
 
           for attempt in {1..20}; do
             if ! kill -0 "$server_pid" 2>/dev/null; then
               cat "$server_log"
               exit 1
             fi
-            if curl --fail --silent --show-error --connect-timeout 1 --max-time 2 http://127.0.0.1:7667; then
+            if curl --fail --silent --show-error --output /dev/null --connect-timeout 1 --max-time 2 http://127.0.0.1:7667; then
               exit 0
             fi
             sleep 0.25
