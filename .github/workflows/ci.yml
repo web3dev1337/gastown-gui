@@ -32,7 +32,6 @@ jobs:
 
       - name: Run E2E tests
         run: npm run test:e2e
-        continue-on-error: true  # E2E tests may fail in CI due to browser issues
         env:
           CI: true
 
@@ -83,8 +82,23 @@ jobs:
 
       - name: Test server startup
         run: |
-          timeout 5 node server.js &
-          sleep 2
-          curl -f http://127.0.0.1:7667 || true
+          server_log=$(mktemp)
+          node server.js >"$server_log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null; wait "$server_pid" 2>/dev/null' EXIT
+
+          for attempt in {1..20}; do
+            if ! kill -0 "$server_pid" 2>/dev/null; then
+              cat "$server_log"
+              exit 1
+            fi
+            if curl --fail --silent --show-error --connect-timeout 1 --max-time 2 http://127.0.0.1:7667; then
+              exit 0
+            fi
+            sleep 0.25
+          done
+
+          cat "$server_log"
+          exit 1
         env:
           PORT: 7667

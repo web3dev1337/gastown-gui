@@ -46,7 +46,6 @@ const MAYOR_OUTPUT_TAIL_LINES = 80;
 const MAYOR_MESSAGE_PREVIEW_LENGTH = 40;
 const REALTIME_REFRESH_DEBOUNCE_MS = 250;
 
-// DOM Elements
 const elements = {
   townName: document.getElementById('town-name'),
   connectionStatus: document.getElementById('connection-status'),
@@ -63,11 +62,9 @@ const elements = {
   rigList: document.getElementById('rig-list'),
 };
 
-// Initialization guard to prevent double-init
 let isInitialized = false;
 let realtimeRefreshTimer = null;
 
-// Loading state helpers
 function showLoadingState(container, message = 'Loading...') {
   if (!container) return;
   container.innerHTML = `
@@ -78,18 +75,10 @@ function showLoadingState(container, message = 'Loading...') {
   `;
 }
 
-function hideLoadingState(container) {
-  // Loading state is automatically replaced when content renders
-  // This is a no-op but kept for clarity
-}
-
-// Navigation
 const navTabs = document.querySelectorAll('.nav-tab');
 const views = document.querySelectorAll('.view');
 
-// Initialize application
 async function init() {
-  // Prevent double initialization
   if (isInitialized) {
     console.log('[App] Already initialized, skipping');
     return;
@@ -98,54 +87,37 @@ async function init() {
 
   console.log('[App] Initializing Gas Town GUI...');
 
-  // Set up navigation
-  setupNavigation();
-
-  // Set up modals
-  initModals();
-
-  // Set up PR list
-  initPRList();
-
-  // Set up Formula list
-  initFormulaList();
-
-  // Set up Issue list
-  initIssueList();
-
-  // Set up Health check
-  initHealthCheck();
-
-  // Set up Dashboard
-  initDashboard();
-
-  // Set up convoy filters
-  setupConvoyFilters();
-
-  // Set up work filters
-  setupWorkFilters();
-
-  // Set up mail filters
-  setupMailFilters();
-
-  // Set up keyboard shortcuts
-  setupKeyboardShortcuts();
-
-  // Set up theme toggle
-  setupThemeToggle();
-
-  // Subscribe to state changes FIRST (before loading data)
-  subscribeToState();
-
-  // Connect WebSocket
-  connectWebSocket();
-
-  // Load initial data
+  initializeInterface();
+  initializeDataFlow();
   await loadInitialData();
+  await initializeFirstRunExperience();
+  initializeEventListeners();
 
   console.log('[App] Initialization complete');
+}
 
-  // Check for first-time users - show onboarding wizard
+function initializeInterface() {
+  setupNavigation();
+  initModals();
+  initPRList();
+  initFormulaList();
+  initIssueList();
+  initHealthCheck();
+  initDashboard();
+  setupConvoyFilters();
+  setupWorkFilters();
+  setupMailFilters();
+  setupKeyboardShortcuts();
+  setupThemeToggle();
+}
+
+function initializeDataFlow() {
+  // Subscribe to state changes before loading data.
+  subscribeToState();
+  connectWebSocket();
+}
+
+async function initializeFirstRunExperience() {
   const showOnboarding = await shouldShowOnboarding();
   const hasExistingTownActivity = Boolean(
     state.get('status')?.rigs?.length ||
@@ -161,8 +133,9 @@ async function init() {
   } else if (hasExistingTownActivity) {
     localStorage.setItem('gastown-tutorial-complete', 'true');
   }
+}
 
-  // Listen for onboarding completion
+function initializeEventListeners() {
   document.addEventListener(ONBOARDING_COMPLETE, () => {
     loadInitialData({ forceRefresh: true });
   });
@@ -222,7 +195,6 @@ async function init() {
       showToast(`Failed to ${action} polecat: ${err.message}`, 'error');
     }
   });
-
 }
 
 function setupNavigation() {
